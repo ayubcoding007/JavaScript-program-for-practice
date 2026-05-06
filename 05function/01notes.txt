@@ -1,0 +1,32 @@
+Function
+
+A function is a block of code that performs a specific task.
+It is used to write reusable code, so we can use the same code 
+multiple times without rewriting it again.
+
+In simple words:
+"A function is a set of instructions that runs when it is called."
+
+
+Syntax
+
+function functionName(parameters) {
+   // code to execute
+}
+
+Syntax Explanation
+. function → keyword to define function
+. functionName → name of function
+. parameters → input values (optional)
+. { } → code block
+
+
+simple program
+
+function add(a, b) {
+   let sum = a + b;
+   console.log("Sum is:", sum);
+}
+
+add(5, 3);
+add(10, 7);

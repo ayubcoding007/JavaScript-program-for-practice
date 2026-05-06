@@ -1,0 +1,22 @@
+JavaScript Assignment Operators
+
+The assignment operators in JavaScript are used to assign values to the variables. 
+These are binary operators. An assignment operator takes two operands, assigns a 
+value to the left operand based on the value of right operand. The left operand 
+is always a variable and the right operand may be literal, variable or expression.
+
+Assignment      Operator	                        Example	    Equivalent To
+=               (Assignment)	                    a = b	    a = b
++=              (Addition Assignment)	            a += b	    a = a + b
+-=              (Subtraction Assignment)	        a -= b	    a = a b
+*=              (Multiplication Assignment)	        a *= b	    a = a * b
+/=              (Division Assignment)	            a /= b	    a = a / b
+%=              (Remainder Assignment)	            a %= b	    a = a % b
+**=             (Exponentiation Assignment)	        a **= b	    a = a ** b
+
+
+Arithmetic Assignment Operators
+
+In this section, we will cover simple assignment and arithmetic assignment operators. 
+An arithmetic assignment operator performs arithmetic operation and assign the result 
+to a variable. Following is the list of operators with example −

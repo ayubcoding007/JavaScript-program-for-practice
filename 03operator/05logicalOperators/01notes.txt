@@ -1,0 +1,41 @@
+JavaScript Logical Operators
+
+The logical operators in JavaScript are generally used with Boolean operands and 
+return a boolean value. There are mainly three types on logical operators in 
+JavaScript - && (AND), || (OR), and ! (NOT). These operators are used to control 
+the flow the program.
+Although the logical operators are typically used with Boolean values, they 
+can be used with any type. For each non-boolean value, the operator converts 
+to a boolean. The falsy values are converted to false and truthy values to true
+
+Operator	Description	       Example
+&&	        Logical AND	       (x && y) is false.
+||	        Logical OR	       (x || y) is true.
+!	        Logical NOT	       !(x) is false.
+
+
+Logical Operators Truth Table
+
+1. AND (&&) Truth Table
+Result is true only when both values are true.
+A	    B	    A && B
+true	true	true
+true	false	false
+false	true	false
+false	false	false
+
+
+2. OR (||) Truth Table
+Result is true if at least one value is true.
+A	    B	    A || B
+true	true	true
+true	false	true
+false	true	true
+false	false	false
+
+
+3. NOT (!) Truth Table
+Reverses the boolean value.
+A	    !A
+true	false
+false	true

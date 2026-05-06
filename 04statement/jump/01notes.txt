@@ -1,0 +1,13 @@
+Jump Statements 
+
+Jump statements are used to control the flow of a program by skipping, stopping, 
+or continuing loop execution.
+They help change the normal sequence of execution.
+
+In simple words
+"Jump statements transfer control from one part of the program to another."
+
+Types of Jump Statements
+1.break
+2.continue
+3.return

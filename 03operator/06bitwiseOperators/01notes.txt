@@ -1,0 +1,20 @@
+JavaScript Bitwise Operators
+
+The bitwise operators in JavaScript perform operations on the integer values at the binary 
+level. They are used to manipulate each bit of the integer values. Bitwise operators are 
+similar to logical operators but they work on individual bits.
+JavaScript bitwise operators works on 32-bits operands. In JavaScript, numbers are stored 
+as 64-bit floating point number. JavaScript converts the numbers to 32-bit signed integer 
+before performing the operation. After bitwise operation, it converts the result to 
+64-bits number.
+There are seven bitwise operators in JavaScript. Following is the list of bitwise 
+operators with description.
+
+Operator	Name	        Description
+&	        Bitwise AND	    Returns 1 if both bits are 1, otherwise 0.
+|	        Bitwise OR	    Returns 1 if either bit is 1, otherwise 0.
+^	        Bitwise XOR	    Returns 1 if both bits are different, otherwise 0.
+!	        Bitwise NOT	    Returns 1 if bit is 0, otherwise 0.
+<<	        Left Shift	    Shifts the bits left by pushing zeros in from right and discarding leftmost bits.
+>>	        Right Shift	    Shifts the bits right by pushing copies of leftmost bit in from left and discarding rightmost bits.
+>>>	        Right Shift     with Zero	Shifts the bits right by pushing zeros in from left and discarding rightmost bits.

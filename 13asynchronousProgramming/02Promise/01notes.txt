@@ -1,0 +1,47 @@
+Promise
+A Promise is an object in JavaScript that is used to handle asynchronous operations 
+and represents the future result of an operation, either success or failure.
+
+A Promise is a special JavaScript object that manages asynchronous tasks such as 
+API calls, timers, file loading, and database operations.
+It acts as a placeholder for a value that may be available now, later, or never.
+
+A Promise helps avoid callback nesting and makes asynchronous code easier to read 
+and manage.
+
+A Promise has three states
+. Pending → The operation is still in progress
+. Fulfilled → The operation completed successfully
+. Rejected → The operation failed
+
+Syntax
+
+let promise = new Promise(function(resolve, reject) {
+   // task
+});
+
+let promise = new Promise(function(resolve, reject) {
+   let result = true;
+
+   if (result) {
+      resolve("Success");
+   } else {
+      reject("Failed");
+   }
+});
+
+promise
+   .then(function(data) {
+      console.log(data);
+   })
+   .catch(function(error) {
+      console.log(error);
+   });
+
+
+
+Explanation
+.  resolve() returns success result
+.  reject() returns failure result
+.  .then() handles successful output
+.  .catch() handles errors

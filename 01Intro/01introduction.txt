@@ -1,0 +1,48 @@
+What is JavaScript
+
+JavaScript is a lightweight, interpreted programming language. 
+It is commonly used to create dynamic and interactive elements 
+in web applications. JavaScript is very easy to implement because 
+it is integrated with HTML. It is open and cross-platform.
+
+
+Why to Learn JavaScript?
+
+JavaScript is a MUST for students and working professionals to 
+become a great Software Engineer, especially when they are working 
+in Web Development Domain. We will list down some of the key 
+advantages of learning JavaScript−
+
+
+JavaScript Applications
+
+As mentioned before, JavaScript is one of the most widely used 
+programming languages (Front-end as well as Back-end). It has its 
+presence in almost every area of software development.
+
+
+Basic JavaScript Example
+
+Below is a basic JavaScript example that will print 
+"Getting started with JavaScript tutorial" on the webpage. 
+You can edit this example and execute it by clicking on the 
+"Edit & Run" button.
+
+<script>
+    document.write("Getting started with JavaScript tutorial");
+</script>
+
+
+Server-Side JavaScript
+
+In the early days, JavaScript was used for front-end development 
+to add behaviors to HTML pages. Since 2009, JavaScript is also 
+used as a server-side programming language to build scalable and 
+dynamic web applications.
+Node.js is one of the best and most popular JavaScript runtime 
+environments for building the server of applications using JavaScript. 
+Using Node.js, we can execute the JavaScript code outside the browser 
+and manage the server task. The server tasks can be an interaction with 
+the database, APIS, file handling, or maybe network communication. 
+Due to the event-driven architecture of Node.js, it is faster than other 
+server-side programming languages.
