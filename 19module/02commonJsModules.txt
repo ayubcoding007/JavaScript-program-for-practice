@@ -1,0 +1,75 @@
+CommonJS is a module system mainly used in older versions of Node.js. Before ES Modules (import/export) 
+became standard, CommonJS was the default way to split code into files.
+
+It uses
+
+require() → import modules
+module.exports or exports → export modules
+
+
+Exporting in CommonJS
+
+// math.js
+function add(a, b) {
+  return a + b;
+}
+module.exports = add;
+
+
+Import:
+
+// app.js
+const add = require('./math');
+console.log(add(2, 3));
+
+
+Exporting multiple values
+
+// math.js
+function add(a, b) {
+  return a + b;
+}
+
+function sub(a, b) {
+  return a - b;
+}
+
+module.exports = {
+  add,
+  sub
+};
+
+
+Or destructure:
+
+const { add, sub } = require('./math');
+
+
+Using exports | Shortcut for module.exports
+
+exports.add = function(a, b) {
+  return a + b;
+};
+exports.sub = function(a, b) {
+  return a - b;
+};
+
+
+Import:
+
+const math = require('./math');
+console.log(math.add(1, 2));
+
+
+Export object (like default object)
+
+// user.js
+module.exports = {
+  name: "John",
+  age: 25
+};
+
+Import
+
+const user = require('./user');
+console.log(user.name);
