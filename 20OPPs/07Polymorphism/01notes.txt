@@ -1,0 +1,38 @@
+Polymorphism is an OOP concept where one method or object can behave in different 
+ways depending on the situation.
+Polymorphism allows the same method name to perform different actions in different 
+classes or objects.
+
+. One name, many forms
+
+A person can be
+. Student at school
+. Employee at office
+. Child at home
+
+Program
+
+class Animal {
+  sound() {
+    console.log("Animal makes sound");
+  }
+}
+
+class Dog extends Animal {
+  sound() {
+    console.log("Dog barks");
+  }
+}
+
+class Cat extends Animal {
+  sound() {
+    console.log("Cat meows");
+  }
+}
+
+let d = new Dog();
+let c = new Cat();
+
+d.sound();
+c.sound();
+

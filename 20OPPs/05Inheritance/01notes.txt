@@ -1,0 +1,38 @@
+Inheritance is an Object-Oriented Programming (OOP) concept where one class 
+or object acquires the properties and methods of another class or object.
+
+Inheritance is the mechanism by which one class inherits the properties and
+ methods of another class.
+
+Inheritance allows code reuse by creating a new class from an existing class.
+. Existing class = Parent / Base / Super class
+. New class = Child / Derived / Sub class
+
+
+// program
+
+class Animal {
+  eat() {
+    console.log("Eating");
+  }
+}
+
+class Dog extends Animal {
+  bark() {
+    console.log("Barking");
+  }
+}
+
+const d1 = new Dog();
+
+d1.eat();   // inherited from Animal
+d1.bark();  // own method
+
+
+Types of Inheritance
+
+. Single Inheritance
+. Multilevel Inheritance
+. Hierarchical Inheritance
+. Multiple Inheritance
+. Hybrid Inheritance

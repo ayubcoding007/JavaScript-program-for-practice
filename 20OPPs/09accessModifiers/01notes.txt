@@ -1,0 +1,76 @@
+Access Modifiers are keywords used to control the accessibility (visibility) 
+of properties and methods in a class.
+
+. They decide who can access data and methods.
+. Access modifiers specify where class members can be accessed from.
+
+Types of Access Modifiers
+
+
+
+1. Public
+. A public member can be accessed from anywhere.
+
+Example
+
+class Student {
+  name = "Rahul";
+}
+
+let s1 = new Student();
+console.log(s1.name);
+
+Explanation
+. name is public
+. Accessible outside class
+
+
+
+2. Private
+. A private member can only be accessed inside the class.
+. In JavaScript, private members use #.
+
+Example
+
+class Student {
+  #marks = 95;
+
+  showMarks() {
+    console.log(this.#marks);
+  }
+}
+
+let s1 = new Student();
+s1.showMarks();
+
+
+
+3. Protected
+
+.accessible inside class
+.accessible in child class
+.not accessible outside
+
+. ! JavaScript has no real protected keyword.
+. It is usually simulated with naming convention:
+
+class Parent {
+  _data = "Protected data";
+}
+
+_data means “treat as protected”, but it is not truly protected.
+
+Example
+
+class Parent {
+  _value = 100;
+}
+
+class Child extends Parent {
+  show() {
+    console.log(this._value);
+  }
+}
+
+let c1 = new Child();
+c1.show();

@@ -1,0 +1,32 @@
+Encapsulation is an OOP concept where data (variables) and methods (functions) 
+are wrapped together inside a single unit, like a class, and direct access to 
+some data is restricted.
+
+Encapsulation is the process of hiding internal data and allowing access only 
+through methods.
+
+. Binding data + functions together and protecting data from direct access.
+
+Real-life example | Think of an ATM.
+. You use buttons like withdraw/deposit
+. You cannot directly access the bank’s internal system or money database
+
+SO 
+. Data is hidden
+. Access is controlled
+
+class Student {
+  #marks;   // private variable
+
+  constructor(marks) {
+    this.#marks = marks;
+  }
+
+  getMarks() {
+    return this.#marks;
+  }
+}
+
+let s1 = new Student(95);
+
+console.log(s1.getMarks());

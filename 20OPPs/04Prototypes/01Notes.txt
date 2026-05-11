@@ -1,0 +1,7 @@
+A prototype is an object that allows other objects to inherit properties 
+and methods from it.
+
+A prototype is a mechanism in JavaScript used for inheritance, where one 
+object can access properties and methods of another object.
+
+

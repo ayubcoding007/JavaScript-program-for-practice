@@ -1,0 +1,86 @@
+JSON
+
+JSON (JavaScript Object Notation) is a lightweight data-interchange format used to 
+store and exchange data between computers in a structured, text-based way.
+In simpler terms, JSON organizes information into key-value pairs and arrays, 
+making it easy for both humans to read and machines to process.
+
+Example
+
+{
+  "name": "Asha",
+  "age": 28,
+  "isStudent": false,
+  "skills": ["Python", "Design", "Writing"]
+}
+
+Impotant
+
+1. The outer structure is an array ([ ]) because it contains a list of multiple users.
+2. Each user inside the array is an object ({ }) with properties like id, name, age, etc.
+
+So the structure is
+
+[
+  { "id": 1, "name": "Sheikh" },
+  { "id": 2, "name": "Ayub" }
+]
+
+Breakdown
+
+. [ ... ] → Array (holds multiple items)
+. { ... } → Object (holds key-value pairs)
+
+Program
+[
+  { "id": 1, "name": "Ahmed Khan", "age": 24, "city": "Mumbai" },
+  { "id": 2, "name": "Ayesha Ali", "age": 22, "city": "Delhi" },
+  { "id": 3, "name": "Omar Sheikh", "age": 27, "city": "Hyderabad" },
+  { "id": 4, "name": "Fatima Noor", "age": 21, "city": "Lucknow" },
+  { "id": 5, "name": "Zaid Hassan", "age": 25, "city": "Pune" },
+  { "id": 6, "name": "Maryam Siddiqui", "age": 23, "city": "Bhopal" },
+  { "id": 7, "name": "Ibrahim Ansari", "age": 29, "city": "Jaipur" },
+  { "id": 8, "name": "Sara Malik", "age": 20, "city": "Kolkata" },
+  { "id": 9, "name": "Yusuf Qureshi", "age": 26, "city": "Surat" },
+  { "id": 10, "name": "Hina Shaikh", "age": 24, "city": "Nagpur" },
+  { "id": 11, "name": "Bilal Khan", "age": 28, "city": "Patna" },
+  { "id": 12, "name": "Zoya Parveen", "age": 19, "city": "Kanpur" },
+  { "id": 13, "name": "Rehan Mirza", "age": 30, "city": "Indore" },
+  { "id": 14, "name": "Nida Begum", "age": 22, "city": "Chennai" },
+  { "id": 15, "name": "Arman Khan", "age": 23, "city": "Ranchi" },
+  { "id": 16, "name": "Sana Rizvi", "age": 25, "city": "Bengaluru" },
+  { "id": 17, "name": "Mustafa Ali", "age": 27, "city": "Aurangabad" },
+  { "id": 18, "name": "Noor Jahan", "age": 24, "city": "Aligarh" },
+  { "id": 19, "name": "Tariq Hussain", "age": 31, "city": "Meerut" },
+  { "id": 20, "name": "Amna Sheikh", "age": 21, "city": "Mysuru" },
+  { "id": 21, "name": "Faizan Ahmad", "age": 26, "city": "Vadodara" },
+  { "id": 22, "name": "Rukaiya Khan", "age": 22, "city": "Agra" },
+  { "id": 23, "name": "Sameer Ansari", "age": 29, "city": "Varanasi" },
+  { "id": 24, "name": "Lubna Shaikh", "age": 23, "city": "Nashik" },
+  { "id": 25, "name": "Danish Malik", "age": 24, "city": "Amritsar" },
+  { "id": 26, "name": "Amina Fatima", "age": 20, "city": "Srinagar" },
+  { "id": 27, "name": "Haris Khan", "age": 28, "city": "Noida" },
+  { "id": 28, "name": "Iqra Noor", "age": 21, "city": "Bhubaneswar" },
+  { "id": 29, "name": "Noman Ali", "age": 27, "city": "Guwahati" },
+  { "id": 30, "name": "Shabana Begum", "age": 26, "city": "Jodhpur" },
+  { "id": 31, "name": "Asad Qureshi", "age": 25, "city": "Raipur" },
+  { "id": 32, "name": "Mahira Khan", "age": 22, "city": "Udaipur" },
+  { "id": 33, "name": "Khalid Hussain", "age": 30, "city": "Gwalior" },
+  { "id": 34, "name": "Bushra Ali", "age": 24, "city": "Kota" },
+  { "id": 35, "name": "Rizwan Shaikh", "age": 29, "city": "Madurai" },
+  { "id": 36, "name": "Nazia Parveen", "age": 23, "city": "Salem" },
+  { "id": 37, "name": "Adnan Khan", "age": 26, "city": "Tirupati" },
+  { "id": 38, "name": "Fariha Noor", "age": 21, "city": "Mangaluru" },
+  { "id": 39, "name": "Junaid Ahmed", "age": 27, "city": "Kozhikode" },
+  { "id": 40, "name": "Tasneem Fatima", "age": 22, "city": "Hubli" },
+  { "id": 41, "name": "Imran Siddiqui", "age": 31, "city": "Thane" },
+  { "id": 42, "name": "Hafsa Khan", "age": 20, "city": "Bhiwandi" },
+  { "id": 43, "name": "Salman Ali", "age": 28, "city": "Moradabad" },
+  { "id": 44, "name": "Rabia Sheikh", "age": 24, "city": "Bareilly" },
+  { "id": 45, "name": "Farhan Qureshi", "age": 25, "city": "Malappuram" },
+  { "id": 46, "name": "Zainab Noor", "age": 23, "city": "Thrissur" },
+  { "id": 47, "name": "Hamza Khan", "age": 27, "city": "Belagavi" },
+  { "id": 48, "name": "Afreen Ali", "age": 21, "city": "Kolhapur" },
+  { "id": 49, "name": "Sufiyan Ansari", "age": 26, "city": "Solapur" },
+  { "id": 50, "name": "Mehwish Fatima", "age": 22, "city": "Goa" }
+]

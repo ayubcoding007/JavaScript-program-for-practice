@@ -1,0 +1,11 @@
+In JavaScript, a module is a way to organize and reuse code by splitting it into separate files. 
+Each module can export variables, functions, or classes, and other modules can import them.
+
+Why use modules?
+. Keep code organized
+. Avoid global variable conflicts
+. Make code reusable and maintainable
+
+Types of Modules in JavaScript
+.ES Modules (Modern JavaScript)
+.CommonJS Modules (Node.js older style)

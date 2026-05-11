@@ -1,0 +1,30 @@
+Object-Oriented Programming (OOP) is a programming approach where code is 
+organized around objects rather than functions or logic alone. These objects 
+represent real-world things and contain both data (called properties) and 
+actions (called methods). The main idea behind OOP is to make programs more 
+structured, reusable, and easier to manage by grouping related information 
+and behavior together. Instead of writing long, complex code, OOP allows 
+developers to break problems into smaller, meaningful objects that interact 
+with each other.
+
+Object-Oriented Programming (OOP) in JavaScript is a way of structuring 
+code using objects and classes so your programs are easier to manage, 
+reuse, and scale.
+
+Even though JavaScript is primarily a prototype-based language, it supports 
+OOP concepts similar to class-based languages like Java or C++
+
+program
+
+class Person {
+  constructor(name) {
+    this.name = name;
+  }
+
+  greet() {
+    console.log("Hello, my name is " + this.name);
+  }
+}
+
+const p1 = new Person("Ayub");
+p1.greet();
