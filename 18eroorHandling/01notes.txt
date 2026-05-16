@@ -1,0 +1,125 @@
+Error handling in JavaScript means dealing with runtime problems gracefully instead of letting your 
+program crash or behave unpredictably.
+
+Types of Errors in JavaScript
+1. Syntax Error
+
+if (true {
+  console.log("hello");
+}
+Error: SyntaxError
+
+
+Reference Error
+
+console.log(name);
+Error: ReferenceError: name is not defined
+
+
+
+Type Error
+
+let num = 10;
+num.toUpperCase();
+Eroor: TypeError: num.toUpperCase is not a function
+
+
+Range Error
+
+let arr = new Array(-1);
+Eroor: RangeError
+
+
+URI Error
+
+decodeURIComponent('%');
+Eroor: URIError
+
+
+Custom Error
+
+throw new Error("Something went wrong");
+
+
+
+try...catch | Main error handling structure.
+
+Syntax
+
+try {
+  // risky code
+} catch (error) {
+  // handle error
+}
+
+
+Example:
+
+try {
+  console.log(user.name);
+} catch (error) {
+  console.log("Error occurred");
+}
+
+Outpur: Error occurred
+
+
+Access error object
+
+try {
+  console.log(user.name);
+} catch (error) {
+  console.log(error);
+}
+
+Output: ReferenceError: user is not defined
+
+
+
+finally | Runs always.
+
+try {
+  console.log("try");
+} catch (error) {
+  console.log("catch");
+} finally {
+  console.log("finally");
+}
+
+Output:
+try
+finally
+
+
+Full Example
+
+function withdraw(balance, amount) {
+  try {
+    if (amount > balance) {
+      throw new Error("Insufficient funds");
+    }
+
+    return balance - amount;
+  } catch (error) {
+    console.log(error.message);
+  } finally {
+    console.log("Transaction complete");
+  }
+}
+
+Use: withdraw(100, 200);
+
+Output:
+Insufficient funds
+Transaction complete
+
+
+
+Summary | Core syntax:
+
+try {
+   risky code
+} catch (error) {
+   handle error
+} finally {
+   always runs
