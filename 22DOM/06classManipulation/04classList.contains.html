@@ -1,0 +1,55 @@
+<!-- 
+classList.contains() is a DOM method used to check whether an HTML element contains a specific CSS class or not.
+It returns true if the class exists and false if it does not exist.
+This method helps JavaScript verify classes before adding or removing them.
+It is commonly used in dynamic styling and interactive webpages.
+
+Syntax
+element.classList.contains("class_name");
+
+-->
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>classList.contains Example</title>
+
+  <style>
+
+    .demo {
+      color: white;
+      background-color: blue;
+      padding: 10px;
+    }
+
+  </style>
+
+</head>
+<body>
+
+  <h1 id="text" class="demo">
+    Hello World
+  </h1>
+
+  <button onclick="checkClass()">
+    Click Here
+  </button>
+
+  <script>
+
+    function checkClass() {
+
+      let element =
+        document.getElementById("text");
+
+      // Checking class
+      let result =
+        element.classList.contains("demo");
+
+      alert(result);
+    }
+
+  </script>
+
+</body>
+</html>

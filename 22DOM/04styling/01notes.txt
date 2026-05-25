@@ -1,0 +1,32 @@
+Styling in JavaScript is used to change the CSS style of HTML elements dynamically.
+JavaScript can modify colors, fonts, sizes, backgrounds, borders, and many other styles.
+The style property is used to apply CSS styles to elements.
+This helps create interactive and dynamic webpages.
+
+element.style.property = "value";
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Styling Example</title>
+</head>
+<body>
+
+  <h1 id="demo">Hello World</h1>
+
+  <button onclick="changeStyle()">Click Here</button>
+
+  <script>
+    function changeStyle() {
+      let element = document.getElementById("demo");
+
+      element.style.color = "blue";
+      element.style.backgroundColor = "yellow";
+      element.style.fontSize = "40px";
+    }
+  </script>
+
+</body>
+</html>

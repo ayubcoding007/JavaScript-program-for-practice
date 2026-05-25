@@ -1,0 +1,55 @@
+<!-- 
+className is a property used to get, set, or change the class name of an HTML element.
+It works with the class attribute of elements.
+JavaScript can use className to apply CSS styles dynamically.
+It is commonly used for changing the appearance of webpage elements.
+
+Syntax
+element.className
+element.className = "class_name";
+
+-->
+
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>className Example</title>
+
+  <style>
+
+    .demo {
+      color: white;
+      background-color: blue;
+      padding: 10px;
+      font-size: 30px;
+    }
+
+  </style>
+
+</head>
+<body>
+
+  <h1 id="text">
+    Hello World
+  </h1>
+
+  <button onclick="changeClass()">
+    Click Here
+  </button>
+
+  <script>
+
+    function changeClass() {
+
+      let element =
+        document.getElementById("text");
+
+      // Setting class name
+      element.className = "demo";
+    }
+
+  </script>
+
+</body>
+</html>

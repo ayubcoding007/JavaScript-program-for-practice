@@ -1,0 +1,65 @@
+<!-- 
+event.currentTarget is a property of the Event Object that returns the element on which the event listener is attached.
+It shows the element currently handling the event.
+This property is useful when multiple nested elements are involved.
+currentTarget may be different from event.target.
+
+Graphical Flow
+
+Event Listener Attached
+          |
+          v
+ event.currentTarget
+          |
+          v
+Returns Element Handling Event
+
+Difference Between target and currentTarget
+
+Property	                Returns
+. event.target	            . Element that triggered the event
+. event.currentTarget	    . Element that handles the event
+
+-->
+
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>currentTarget Example</title>
+  <style>
+    .parent {
+      padding: 30px;
+      border: 3px solid blue;
+      margin: 20px;
+    }
+    .child {
+      padding: 20px;
+      border: 3px solid red;
+      background-color: lightyellow;
+    }
+  </style>
+</head>
+<body>
+  <div id="parent" class="parent">
+
+    Parent Div
+
+    <button id="child" class="child">
+      Click Me
+    </button>
+  </div>
+  <h2 id="result">
+    Output
+  </h2>
+  <script>
+    let parent = document.getElementById("parent");
+    let result = document.getElementById("result");
+    // Event listener on parent
+    parent.addEventListener("click", function(event) {
+        result.innerText = "Target : " + event.target.tagName + " | CurrentTarget : " + event.currentTarget.tagName;
+      }
+    );
+  </script>
+</body>
+</html>

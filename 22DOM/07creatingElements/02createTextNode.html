@@ -1,0 +1,48 @@
+<!-- 
+createTextNode() is a DOM method used to create a text node dynamically in JavaScript.
+It creates only text, not an HTML element.
+The text node is usually added inside an element using appendChild().
+This method helps add plain text safely to webpages.
+
+Syntax
+document.createTextNode("text");
+
+-->
+
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>createTextNode Example</title>
+</head>
+<body>
+
+  <button onclick="addText()">
+    Click Here
+  </button>
+
+  <script>
+
+    function addText() {
+
+      // Creating paragraph element
+      let para =
+        document.createElement("p");
+
+      // Creating text node
+      let text =
+        document.createTextNode(
+          "Welcome to JavaScript"
+        );
+
+      // Adding text to paragraph
+      para.appendChild(text);
+
+      // Adding paragraph to body
+      document.body.appendChild(para);
+    }
+
+  </script>
+
+</body>
+</html>

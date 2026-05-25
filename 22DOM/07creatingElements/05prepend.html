@@ -1,0 +1,76 @@
+<!-- 
+prepend() is a DOM method used to insert elements or text at the beginning of a parent element.
+It adds the new content before all existing child elements.
+This method can add both HTML elements and plain text.
+It is useful for dynamically adding content at the top of a webpage section.
+
+Syntax
+parentElement.prepend(content);
+ -->
+
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>prepend Example</title>
+
+  <style>
+
+    .box {
+      background-color: lightgreen;
+      padding: 10px;
+      margin: 10px;
+      border: 2px solid green;
+      font-size: 20px;
+    }
+
+  </style>
+
+</head>
+<body>
+
+  <h1>Student List</h1>
+
+  <div id="container">
+
+    <div class="box">
+      Student 1
+    </div>
+
+  </div>
+
+  <button onclick="addStudent()">
+    Add Student
+  </button>
+
+  <script>
+
+    let count = 2;
+
+    function addStudent() {
+
+      // Creating new div
+      let student =
+        document.createElement("div");
+
+      // Adding class
+      student.className = "box";
+
+      // Adding text
+      student.append(
+        "Student ",
+        count
+      );
+
+      // Adding at beginning
+      document
+        .getElementById("container")
+        .prepend(student);
+
+      count++;
+    }
+
+  </script>
+
+</body>
+</html>

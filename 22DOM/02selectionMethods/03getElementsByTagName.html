@@ -1,0 +1,34 @@
+<!-- 
+getElementsByTagName() is a DOM method used to select HTML elements by their tag name.
+It returns a collection of all elements with the specified tag.
+This method is useful when multiple elements have the same HTML tag.
+JavaScript can access and modify those elements dynamically.
+
+Syntax
+document.getElementsByTagName("tagname"); 
+
+-->
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Tag Name Example</title>
+</head>
+<body>
+
+  <p>First Paragraph</p>
+  <p>Second Paragraph</p>
+
+  <button onclick="changeText()">Click Here</button>
+
+  <script>
+    function changeText() {
+      let para = document.getElementsByTagName("p");
+
+      para[0].innerHTML = "Changed First Paragraph";
+      para[1].innerHTML = "Changed Second Paragraph";
+    }
+  </script>
+
+</body>
+</html>

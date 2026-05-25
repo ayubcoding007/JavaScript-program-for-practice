@@ -1,0 +1,70 @@
+<!-- 
+Window events are events related to the browser window.
+They occur when the webpage loads, resizes, or scrolls.
+JavaScript uses window events to control webpage behavior dynamically.
+These events are useful for responsive design and page interactions.
+
+
+Common Window Events
+
+Event	        Description
+. load	        . Occurs when webpage fully loads
+. resize	    . Occurs when browser window size changes
+. scroll	    . Occurs when webpage is scrolled
+
+-->
+
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Window Events Example</title>
+  <style>
+    body {
+      height: 2000px;
+    }
+    .box {
+      position: fixed;
+      top: 10px;
+      left: 10px;
+      padding: 15px;
+      border: 2px solid blue;
+      background-color: lightyellow;
+      font-size: 20px;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="result" class="box">
+    Window Events Output
+  </div>
+
+  <script>
+    let result =
+      document.getElementById("result");
+    // load event
+    window.addEventListener("load", function() {
+        result.innerText =
+          "Page Loaded Successfully";
+      }
+    );
+    // resize event
+    window.addEventListener("resize", function() {
+        result.innerText =
+          "Window Resized : " +
+          window.innerWidth +
+          "px";
+      }
+    );
+    // scroll event
+    window.addEventListener("scroll", function() {
+        result.innerText =
+          "Page Scrolled : " +
+          window.scrollY +
+          "px";
+      }
+    );
+  </script>
+</body>
+</html>

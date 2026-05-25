@@ -1,0 +1,38 @@
+<!-- 
+getAttribute() is a DOM method used to get the value of an attribute from an HTML element.
+It helps JavaScript read attributes such as id, class, href, src, title, and more.
+The method returns the attribute value as a string.
+If the attribute does not exist, it returns null.
+
+element.getAttribute("attribute_name");
+
+-->
+
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>getAttribute Example</title>
+</head>
+<body>
+
+  <a id="link" href="https://example.com" title="Visit Website">
+    Open Website
+  </a>
+
+  <button onclick="showAttribute()">Click Here</button>
+
+  <script>
+    function showAttribute() {
+      let element = document.getElementById("link");
+
+      let url = element.getAttribute("href");
+      let title = element.getAttribute("title");
+
+      alert("Href: " + url);
+      alert("Title: " + title);
+    }
+  </script>
+
+</body>
+</html>

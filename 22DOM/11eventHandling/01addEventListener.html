@@ -1,0 +1,60 @@
+<!-- 
+addEventListener() is a DOM method used to attach events to HTML elements using JavaScript.
+It allows multiple events to be added to the same element without replacing previous events.
+This is the modern and recommended way of event handling in JavaScript.
+It helps create interactive and dynamic webpages.
+
+element.addEventListener(
+  "event",
+  function() {
+
+    // code
+
+  }
+);
+
+-->
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>addEventListener Example</title>
+  <style>
+    .box {
+      width: 300px;
+      padding: 20px;
+      border: 2px solid blue;
+      text-align: center;
+      font-size: 25px;
+      margin: 20px;
+    }
+  </style>
+</head>
+<body>
+  <h1 id="text" class="box">
+    Hello World
+  </h1>
+  <button id="btn">
+    Click Here
+  </button>
+  <script>
+    // Selecting elements
+    let button =
+      document.getElementById("btn");
+    let heading =
+      document.getElementById("text");
+    // Adding event listener
+    button.addEventListener(
+      "click",
+      function() {
+        heading.innerText =
+          "addEventListener Executed";
+        heading.style.color =
+          "red";
+        heading.style.backgroundColor =
+          "lightyellow";
+      }
+    );
+  </script>
+</body>
+</html>

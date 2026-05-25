@@ -1,0 +1,32 @@
+<!-- 
+textContent is a property used to get or change the text content of an HTML element.
+It returns all text inside the element, including hidden text.
+Using textContent, JavaScript can modify text without interpreting HTML tags.
+It is faster and safer when working only with plain text.
+
+Syntax
+element.textContent
+element.textContent = "New Text";
+
+
+-->
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>textContent Example</title>
+</head>
+<body>
+
+  <h1 id="demo">Hello World</h1>
+
+  <button onclick="changeText()">Click Here</button>
+
+  <script>
+    function changeText() {
+      document.getElementById("demo").textContent = "Welcome to JavaScript";
+    }
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!-- 
+innerText is a property used to get or change the visible text content of an HTML element.
+It only works with the text displayed on the webpage.
+Using innerText, JavaScript can dynamically change text inside elements.
+It does not interpret HTML tags like innerHTML.
+
+Syntax
+element.innerText
+element.innerText = "New Text"; 
+
+-->
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>innerText Example</title>
+</head>
+<body>
+
+  <h1 id="demo">Hello World</h1>
+
+  <button onclick="changeText()">Click Here</button>
+
+  <script>
+    function changeText() {
+      document.getElementById("demo").innerText = "Welcome to JavaScript";
+    }
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,73 @@
+<!-- 
+Attributes are special properties added inside HTML tags to provide extra information about elements.
+Examples of attributes are id, class, href, src, title, and style.
+JavaScript can get, set, remove, and check these attributes dynamically using DOM methods.
+Attributes help control the behavior and appearance of webpage elements.
+-->
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Attributes Value Get and Set</title>
+</head>
+<body>
+
+  <a id="link"
+     href="https://google.com"
+     title="Google Website"
+     class="demo">
+     
+     Open Website
+  </a>
+
+  <br><br>
+
+  <button onclick="changeValue()">
+    Click Here
+  </button>
+
+  <script>
+
+    function changeValue() {
+
+      let element =
+        document.getElementById("link");
+
+      // Getting all attributes
+      let attrs = element.attributes;
+
+      // Getting values using index
+      alert(
+        "Before Change\n\n" +
+
+        "0 Index : " + attrs[0].value + "\n" +
+        "1 Index : " + attrs[1].value + "\n" +
+        "2 Index : " + attrs[2].value + "\n" +
+        "3 Index : " + attrs[3].value
+      );
+
+      // Setting values using index
+      attrs[1].value =
+        "https://example.com";
+
+      attrs[2].value =
+        "Visit Example Website";
+
+      attrs[3].value =
+        "newClass";
+
+      // Getting updated values
+      alert(
+        "After Change\n\n" +
+
+        "0 Index : " + attrs[0].value + "\n" +
+        "1 Index : " + attrs[1].value + "\n" +
+        "2 Index : " + attrs[2].value + "\n" +
+        "3 Index : " + attrs[3].value
+      );
+    }
+
+  </script>
+
+</body>
+</html>

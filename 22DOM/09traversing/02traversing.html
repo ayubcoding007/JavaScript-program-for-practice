@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>DOM Traversing All Properties</title>
+
+  <style>
+    .box {
+      border: 2px solid blue;
+      padding: 10px;
+      margin: 10px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div id="parent" class="box">
+
+    <h1>Heading</h1>
+
+    Text Node (inside div)
+
+    <p id="child">Paragraph</p>
+
+    <button>Click Me</button>
+
+  </div>
+
+  <button onclick="showDOM()">
+    Show DOM Traversing
+  </button>
+
+  <script>
+
+    function showDOM() {
+
+      let child =
+        document.getElementById("child");
+
+      // parentNode → returns parent node (includes text/comments)
+      console.log("parentNode:", child.parentNode);
+
+      // parentElement → returns parent element only
+      console.log("parentElement:", child.parentElement);
+
+      // children → returns only element children
+      console.log("children:", child.parentElement.children);
+
+      // childNodes → returns all nodes (text + elements)
+      console.log("childNodes:", child.parentElement.childNodes);
+
+      // firstChild → first node (may be text)
+      console.log("firstChild:", child.parentElement.firstChild);
+
+      // lastChild → last node (may be text)
+      console.log("lastChild:", child.parentElement.lastChild);
+
+      // firstElementChild → first element only
+      console.log("firstElementChild:", child.parentElement.firstElementChild);
+
+      // lastElementChild → last element only
+      console.log("lastElementChild:", child.parentElement.lastElementChild);
+
+      // nextSibling → next node (may be text)
+      console.log("nextSibling:", child.nextSibling);
+
+      // previousSibling → previous node (may be text)
+      console.log("previousSibling:", child.previousSibling);
+
+      // nextElementSibling → next element only
+      console.log("nextElementSibling:", child.nextElementSibling);
+
+      // previousElementSibling → previous element only
+      console.log("previousElementSibling:", child.previousElementSibling);
+
+    }
+
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,71 @@
+<!-- 
+append() is a DOM method used to add elements or text nodes to an HTML element.
+It inserts the new content at the end of the parent element.
+Unlike appendChild(), it can add multiple elements and plain text together.
+This method is useful for dynamic webpage content creation.
+
+Syntax
+parentElement.append(content);
+
+-->
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>append Best Example</title>
+
+  <style>
+
+    .box {
+      background-color: lightblue;
+      padding: 10px;
+      margin: 10px;
+      border: 2px solid blue;
+      font-size: 20px;
+    }
+
+  </style>
+
+</head>
+<body>
+
+  <h1>Student List</h1>
+
+  <div id="container">
+  </div>
+
+  <button onclick="addStudent()">
+    Add Student
+  </button>
+
+  <script>
+
+    let count = 1;
+
+    function addStudent() {
+
+      // Creating new div
+      let student =
+        document.createElement("div");
+
+      // Adding class
+      student.className = "box";
+
+      // Adding text
+      student.append(
+        "Student ",
+        count
+      );
+
+      // Adding element to container
+      document
+        .getElementById("container")
+        .append(student);
+
+      count++;
+    }
+
+  </script>
+
+</body>
+</html>

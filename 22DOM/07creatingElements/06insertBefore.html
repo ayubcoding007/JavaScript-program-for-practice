@@ -1,0 +1,81 @@
+<!-- 
+insertBefore() is a DOM method used to insert a new element before an existing element inside a parent element.
+It helps place elements at a specific position in the DOM tree.
+This method is useful when we want to control the exact order of elements dynamically.
+It works with elements and text nodes.
+
+Syntax
+parentElement.insertBefore(
+  newElement,
+  existingElement
+);
+
+-->
+
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>insertBefore Example</title>
+
+  <style>
+
+    .box {
+      background-color: lightblue;
+      padding: 10px;
+      margin: 10px;
+      border: 2px solid blue;
+      font-size: 20px;
+    }
+
+  </style>
+
+</head>
+<body>
+
+  <div id="container">
+
+    <div id="student2" class="box">
+      Student 2
+    </div>
+
+  </div>
+
+  <button onclick="addStudent()">
+    Click Here
+  </button>
+
+  <script>
+
+    function addStudent() {
+
+      // Creating new element
+      let newStudent =
+        document.createElement("div");
+
+      // Adding class
+      newStudent.className = "box";
+
+      // Adding text
+      newStudent.innerText =
+        "Student 1";
+
+      // Parent element
+      let parent =
+        document.getElementById("container");
+
+      // Existing element
+      let existing =
+        document.getElementById("student2");
+
+      // Insert before existing element
+      parent.insertBefore(
+        newStudent,
+        existing
+      );
+    }
+
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,80 @@
+<!-- 
+Keyboard events are events that occur when the user presses or releases keys on the keyboard.
+JavaScript uses these events to detect keyboard actions dynamically.
+They are commonly used in forms, games, search boxes, and shortcuts.
+Keyboard events help create interactive webpages.
+
+Common Keyboard Events
+
+Event	        Description
+. keydown	    . Occurs when key is pressed
+. keyup	        . Occurs when key is released
+. keypress	    . Occurs when character key is pressed
+
+-->
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Keyboard Events Example</title>
+
+  <style>
+
+    .box {
+      width: 300px;
+      padding: 15px;
+      border: 2px solid blue;
+      font-size: 20px;
+      margin: 20px;
+    }
+
+  </style>
+
+</head>
+
+<body>
+
+  <input
+    type="text"
+    id="inputBox"
+    class="box"
+    placeholder="Type Something"
+  >
+  
+  <h2 id="result">
+    Keyboard Event Output
+  </h2>
+
+  <script>
+    let input =
+      document.getElementById("inputBox");
+    let result =
+      document.getElementById("result");
+    // keydown event
+    input.addEventListener(
+      "keydown",
+      function() {
+        result.innerText =
+          "Key Down Event";
+      }
+    );
+    // keyup event
+    input.addEventListener(
+      "keyup",
+      function() {
+        result.innerText =
+          "Key Up Event";
+      }
+    );
+    // keypress event
+    input.addEventListener(
+      "keypress",
+      function() {
+
+        result.innerText =
+          "Key Press Event";
+      }
+    );
+  </script>
+</body>
+</html>

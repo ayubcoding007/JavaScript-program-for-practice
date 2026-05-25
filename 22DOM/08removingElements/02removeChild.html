@@ -1,0 +1,65 @@
+<!-- 
+removeChild() is a DOM method used to remove a child element from a parent element.
+The parent element must be selected before removing the child element.
+It helps JavaScript dynamically delete elements from the webpage.
+This method works with both elements and text nodes.
+
+Syntax
+parentElement.removeChild(
+  childElement
+);
+
+ -->
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>removeChild Example</title>
+
+  <style>
+
+    .box {
+      background-color: lightblue;
+      padding: 10px;
+      margin: 10px;
+      border: 2px solid blue;
+      font-size: 20px;
+    }
+
+  </style>
+
+</head>
+<body>
+
+  <div id="container">
+
+    <div id="student" class="box">
+      Student 1
+    </div>
+
+  </div>
+
+  <button onclick="removeStudent()">
+    Remove Student
+  </button>
+
+  <script>
+
+    function removeStudent() {
+
+      // Parent element
+      let parent =
+        document.getElementById("container");
+
+      // Child element
+      let child =
+        document.getElementById("student");
+
+      // Removing child
+      parent.removeChild(child);
+    }
+
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!-- 
+classList.toggle() is a DOM method used to add or remove a CSS class from an HTML element automatically.
+If the class exists, it removes the class.
+If the class does not exist, it adds the class.
+This method is useful for creating interactive effects like dark mode, menus, and animations.
+
+Syntax
+element.classList.toggle("class_name");
+
+-->
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>classList.toggle Example</title>
+
+  <style>
+
+    .demo {
+      color: white;
+      background-color: blue;
+      padding: 10px;
+      font-size: 30px;
+    }
+
+  </style>
+
+</head>
+<body>
+
+  <h1 id="text">
+    Hello World
+  </h1>
+
+  <button onclick="toggleClass()">
+    Click Here
+  </button>
+
+  <script>
+
+    function toggleClass() {
+
+      let element =
+        document.getElementById("text");
+
+      // Toggle class
+      element.classList.toggle("demo");
+    }
+
+  </script>
+
+</body>
+</html>

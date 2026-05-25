@@ -1,0 +1,81 @@
+<!-- 
+replaceChild() is a DOM method used to replace an existing child element with a new element inside a parent element.
+It helps dynamically update webpage content without reloading the page.
+The parent element must be selected before replacing the child.
+This method works with both elements and text nodes.
+
+Syntax
+parentElement.replaceChild(
+  newElement,
+  oldElement
+);
+
+ -->
+
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>replaceChild Example</title>
+
+  <style>
+
+    .box {
+      background-color: lightblue;
+      padding: 10px;
+      margin: 10px;
+      border: 2px solid blue;
+      font-size: 20px;
+    }
+
+  </style>
+
+</head>
+<body>
+
+  <div id="container">
+
+    <div id="oldStudent" class="box">
+      Student 1
+    </div>
+
+  </div>
+
+  <button onclick="replaceElement()">
+    Replace Student
+  </button>
+
+  <script>
+
+    function replaceElement() {
+
+      // Creating new element
+      let newElement =
+        document.createElement("div");
+
+      // Adding class
+      newElement.className = "box";
+
+      // Adding text
+      newElement.innerText =
+        "Student 2";
+
+      // Parent element
+      let parent =
+        document.getElementById("container");
+
+      // Old element
+      let oldElement =
+        document.getElementById("oldStudent");
+
+      // Replacing child
+      parent.replaceChild(
+        newElement,
+        oldElement
+      );
+    }
+
+  </script>
+
+</body>
+</html>

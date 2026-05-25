@@ -1,0 +1,55 @@
+<!-- 
+remove() is a DOM method used to remove an HTML element from the webpage.
+It deletes the selected element completely from the DOM tree.
+This method is simple and commonly used for dynamic content removal.
+It works directly on the element that needs to be removed.
+
+Syntax
+element.remove();
+
+-->
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>remove Example</title>
+
+  <style>
+
+    .box {
+      background-color: lightblue;
+      padding: 10px;
+      margin: 10px;
+      border: 2px solid blue;
+      font-size: 20px;
+    }
+
+  </style>
+
+</head>
+<body>
+
+  <div id="student" class="box">
+    Student 1
+  </div>
+
+  <button onclick="removeElement()">
+    Remove Student
+  </button>
+
+  <script>
+
+    function removeElement() {
+
+      // Selecting element
+      let element =
+        document.getElementById("student");
+
+      // Removing element
+      element.remove();
+    }
+
+  </script>
+
+</body>
+</html>

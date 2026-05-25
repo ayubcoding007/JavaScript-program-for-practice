@@ -1,0 +1,50 @@
+<!-- 
+classList.add() is a DOM method used to add one or more CSS classes to an HTML element.
+It helps JavaScript apply styles dynamically without changing existing classes.
+If the class already exists, it will not be added again.
+This method is commonly used for styling and interactive webpages.
+
+Syntax
+element.classList.add("class_name");
+
+-->
+
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>classList.add Example</title>
+
+  <style>
+    .demo {
+      color: white;
+      background-color: blue;
+      padding: 10px;
+      font-size: 30px;
+    }
+  </style>
+
+</head>
+<body>
+
+  <h1 id="text">Hello World</h1>
+
+  <button onclick="addClass()">
+    Click Here
+  </button>
+
+  <script>
+
+    function addClass() {
+
+      let element =
+        document.getElementById("text");
+
+      // Adding class
+      element.classList.add("demo");
+    }
+
+  </script>
+
+</body>
+</html>

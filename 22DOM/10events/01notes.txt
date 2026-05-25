@@ -1,0 +1,69 @@
+Events in JavaScript are actions or occurrences that happen in the browser, such as a user clicking a button, moving the mouse, typing on the keyboard, or submitting a form.
+JavaScript uses events to make webpages interactive and dynamic.
+When an event happens, it can trigger a function (called an event handler).
+Events are an important part of DOM programming.
+
+Common Types of Events
+. Mouse Events → click, dblclick, mouseover, mouseout
+. Keyboard Events → keydown, keyup, keypress
+. Form Events → submit, change, focus, blur
+. Window Events → load, resize, scroll
+
+
+Event Handling Methods
+. Inline event (in HTML)
+. Using property (like onclick)
+. Using addEventListener() (best method) || eventHandling
+
+
+Program 
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>JavaScript Events Example</title>
+
+  <style>
+    .box {
+      padding: 10px;
+      margin: 10px;
+      border: 2px solid blue;
+      font-size: 20px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <h1 id="title" class="box">Hello World</h1>
+
+  <button onclick="clickEvent()">Click Event</button>
+  <button onmouseover="hoverEvent()">Mouse Over Event</button>
+  <button onmouseout="outEvent()">Mouse Out Event</button>
+
+  <script>
+
+    // click event → runs when button is clicked
+    function clickEvent() {
+      document.getElementById("title").innerText =
+        "Button Clicked!";
+    }
+
+    // mouseover event → runs when mouse enters button
+    function hoverEvent() {
+      document.getElementById("title").style.color = "blue";
+      document.getElementById("title").innerText =
+        "Mouse Over Event";
+    }
+
+    // mouseout event → runs when mouse leaves button
+    function outEvent() {
+      document.getElementById("title").style.color = "red";
+      document.getElementById("title").innerText =
+        "Mouse Out Event";
+    }
+
+  </script>
+
+</body>
+</html>

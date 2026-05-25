@@ -1,0 +1,63 @@
+<!-- 
+Using property events means assigning an event directly to an HTML element using JavaScript properties like onclick, onmouseover, or onkeyup.
+In this method, JavaScript handles the event instead of writing it inside HTML tags.
+It helps keep HTML and JavaScript separate.
+This method is commonly used for simple event handling.
+
+Syntax
+element.onclick = function() {
+  // code
+};
+
+ -->
+
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Using Property Event Example</title>
+
+  <style>
+
+    .box {
+      padding: 10px;
+      border: 2px solid blue;
+      font-size: 25px;
+      width: 300px;
+      text-align: center;
+    }
+
+  </style>
+
+</head>
+
+<body>
+
+  <h1 id="text" class="box">
+    Hello World
+  </h1>
+
+  <button id="btn">
+    Click Here
+  </button>
+
+  <script>
+
+    // Selecting button
+    let button =
+      document.getElementById("btn");
+
+    // Using property event
+    button.onclick = function() {
+
+      document.getElementById("text").innerText =
+        "Property Event Executed";
+
+      document.getElementById("text").style.color =
+        "red";
+    };
+
+  </script>
+
+</body>
+</html>

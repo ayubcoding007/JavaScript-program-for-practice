@@ -1,0 +1,82 @@
+<!-- 
+Mouse events are events that occur when the user interacts with the mouse on a webpage.
+They are used to detect actions like clicking, double-clicking, or moving the mouse over elements.
+JavaScript uses mouse events to create interactive webpages.
+These events are part of DOM event handling.
+
+Common Mouse Events
+
+Event	    Description
+click	    Occurs when element is clicked
+dblclick	Occurs when element is double-clicked
+mouseover	Occurs when mouse enters element
+mouseout	Occurs when mouse leaves element
+
+-->
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Mouse Events Example</title>
+  <style>
+    .box {
+      width: 300px;
+      padding: 20px;
+      border: 2px solid blue;
+      text-align: center;
+      font-size: 25px;
+      margin: 20px;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="box" class="box">
+    Mouse Events
+  </div>
+
+  <script>
+    let box =
+      document.getElementById("box");
+    // click event
+    box.addEventListener("click", function() {
+        box.innerText =
+          "Click Event";
+
+        box.style.backgroundColor =
+          "lightblue";
+      }
+    );
+    // double click event
+    box.addEventListener("dblclick", function() {
+        box.innerText =
+          "Double Click Event";
+
+        box.style.backgroundColor =
+          "yellow";
+      }
+    );
+    // mouseover event
+    box.addEventListener("mouseover", function() {
+        box.innerText =
+          "Mouse Over Event";
+
+        box.style.color =
+          "red";
+      }
+    );
+    // mouseout event
+    box.addEventListener("mouseout", function() {
+
+        box.innerText =
+          "Mouse Out Event";
+
+        box.style.color =
+          "black";
+      }
+    );
+
+  </script>
+</body>
+</html>
+

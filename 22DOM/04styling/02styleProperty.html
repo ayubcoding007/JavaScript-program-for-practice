@@ -1,0 +1,36 @@
+<!-- 
+style Property in JavaScript
+
+The style property is used to apply CSS styles to HTML elements using JavaScript.
+It helps change the appearance of elements dynamically on a webpage.
+Using the style property, we can modify color, size, background, border, and other CSS properties.
+This makes webpages interactive and visually attractive.
+
+Syntax
+element.style.property = "value";
+
+ -->
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Style Property Example</title>
+</head>
+<body>
+
+  <h1 id="demo">Hello World</h1>
+
+  <button onclick="changeStyle()">Click Here</button>
+
+  <script>
+    function changeStyle() {
+      let element = document.getElementById("demo");
+
+      element.style.color = "red";
+      element.style.fontSize = "35px";
+      element.style.backgroundColor = "yellow";
+    }
+  </script>
+
+</body>
+</html>

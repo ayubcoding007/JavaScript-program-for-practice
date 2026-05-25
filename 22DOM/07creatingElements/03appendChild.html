@@ -1,0 +1,50 @@
+<!-- 
+appendChild() is a DOM method used to add a new child element or node to an existing HTML element.
+It inserts the new element at the end of the parent element.
+This method is commonly used with createElement() and createTextNode().
+It helps create dynamic and interactive webpages.
+
+Syntax
+parentElement.appendChild(childElement);
+
+-->
+
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>appendChild Example</title>
+</head>
+<body>
+
+  <div id="container">
+  </div>
+
+  <button onclick="addElement()">
+    Click Here
+  </button>
+
+  <script>
+
+    function addElement() {
+
+      // Creating new paragraph
+      let para =
+        document.createElement("p");
+
+      // Adding text
+      para.innerText =
+        "This is a new paragraph";
+
+      // Getting parent element
+      let parent =
+        document.getElementById("container");
+
+      // Adding child element
+      parent.appendChild(para);
+    }
+
+  </script>
+
+</body>
+</html> 

@@ -1,0 +1,34 @@
+DOM Traversing means moving through HTML elements in the DOM tree using JavaScript.
+It helps access parent, child, and sibling elements easily.
+JavaScript provides different properties and methods for navigating between elements.
+DOM Traversing is useful for dynamically manipulating webpage content.
+
+Types of DOM Traversing
+. parentNode
+. parentElement
+. children
+. childNodes
+. firstChild
+. lastChild
+. firstElementChild
+. lastElementChild
+. nextSibling
+. previousSibling
+. nextElementSibling
+. previousElementSibling
+
+
+Short Definitions 
+
+. parentNode → returns parent node (text + element)
+. parentElement → returns only parent element
+. children → returns only element children
+. childNodes → returns all nodes (text + comment + element)
+. firstChild → first node (may include text)
+. lastChild → last node (may include text)
+. firstElementChild → first element only
+. lastElementChild → last element only
+. nextSibling → next node (may include text)
+. previousSibling → previous node (may include text)
+. nextElementSibling → next element only
+. previousElementSibling → previous element only

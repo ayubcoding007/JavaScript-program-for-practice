@@ -1,0 +1,47 @@
+<!-- 
+setAttribute() is a DOM method used to set or change the value of an HTML attribute.
+It helps JavaScript add new attributes or modify existing attributes dynamically.
+This method can change attributes such as id, class, href, src, title, and more.
+It is commonly used to update webpage elements dynamically.
+
+Syntax
+element.setAttribute("attribute_name", "value");
+
+-->
+
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>setAttribute Example</title>
+</head>
+<body>
+
+  <a id="link">Open Website</a>
+
+  <br><br>
+
+  <button onclick="setLink()">Click Here</button>
+
+  <script>
+    function setLink() {
+
+      let element = document.getElementById("link");
+
+      // Adding multiple attributes
+      element.setAttribute("href", "https://example.com");
+      element.setAttribute("title", "Visit Website");
+      element.setAttribute("target", "_blank");
+
+      // Adding multiple CSS styles
+      element.setAttribute(
+        "style",
+        "color:white; background-color:blue; padding:10px; text-decoration:none; font-size:20px; border-radius:5px;"
+      );
+
+      alert("Attributes and Styles Added");
+    }
+  </script>
+
+</body>
+</html>

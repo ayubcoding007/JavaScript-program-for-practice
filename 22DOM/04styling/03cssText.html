@@ -1,0 +1,32 @@
+<!-- 
+cssText is a property used to apply multiple CSS styles to an HTML element at once.
+It is used with the style property in JavaScript.
+Using cssText, we can write CSS styles in a single line as a string.
+This helps apply many styles quickly and easily.
+
+Syntax
+element.style.cssText = "property:value; property:value;";
+
+ -->
+
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>cssText Example</title>
+</head>
+<body>
+
+  <h1 id="demo">Hello World</h1>
+
+  <button onclick="changeStyle()">Click Here</button>
+
+  <script>
+    function changeStyle() {
+      document.getElementById("demo").style.cssText =
+        "color: blue; background-color: yellow; font-size: 40px;";
+    }
+  </script>
+
+</body>
+</html>

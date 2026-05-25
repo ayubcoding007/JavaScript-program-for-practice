@@ -1,0 +1,34 @@
+<!-- 
+querySelectorAll() is a DOM method used to select all HTML elements that match a specified CSS selector.
+It returns a collection (NodeList) of matching elements.
+It can select elements using class, id, tag name, or other CSS selectors.
+JavaScript can use this method to access and modify multiple elements at once.
+
+Syntax
+document.querySelectorAll("selector");
+
+ -->
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>querySelectorAll Example</title>
+</head>
+<body>
+
+  <p class="demo">First Paragraph</p>
+  <p class="demo">Second Paragraph</p>
+
+  <button onclick="changeText()">Click Here</button>
+
+  <script>
+    function changeText() {
+      let elements = document.querySelectorAll(".demo");
+
+      elements[0].innerHTML = "Changed First Paragraph";
+      elements[1].innerHTML = "Changed Second Paragraph";
+    }
+  </script>
+
+</body>
+</html>

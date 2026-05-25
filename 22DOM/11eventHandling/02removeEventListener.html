@@ -1,0 +1,76 @@
+<!-- 
+removeEventListener() is a DOM method used to remove an event listener from an HTML element.
+It stops the event from executing when the event occurs.
+This method is useful when events are no longer needed.
+It helps improve performance and control webpage behavior dynamically.
+
+Syntax
+element.removeEventListener(
+  "event",
+  functionName
+);
+
+-->
+
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>removeEventListener Example</title>
+  <style>
+    .box {
+      width: 300px;
+      padding: 20px;
+      border: 2px solid blue;
+      text-align: center;
+      font-size: 25px;
+      margin: 20px;
+    }
+  </style>
+</head>
+
+<body>
+  <h1 id="text" class="box">
+    Hello World
+  </h1>
+
+  <button id="addBtn">
+    Click Event
+  </button>
+
+  <button id="removeBtn">
+    Remove Event
+  </button>
+
+  <script>
+    let heading =
+      document.getElementById("text");
+    let addButton =
+      document.getElementById("addBtn");
+    let removeButton =
+      document.getElementById("removeBtn");
+    // Event function
+    function changeText() {
+      heading.innerText = "Event Executed";
+      heading.style.color = "red";
+    }
+    // Adding event
+    addButton.addEventListener(
+      "click",
+      changeText
+    );
+
+    // Removing event
+    removeButton.addEventListener("click", function() {
+        addButton.removeEventListener(
+          "click",
+          changeText
+        );
+        alert(
+          "Click Event Removed"
+        );
+      }
+    );
+  </script>
+</body>
+</html>

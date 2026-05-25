@@ -1,0 +1,42 @@
+<!-- 
+createElement() is a DOM method used to create a new HTML element dynamically using JavaScript.
+The created element is not visible on the webpage until it is added to the document.
+It helps developers generate elements like headings, paragraphs, buttons, and images dynamically.
+This method is commonly used in dynamic and interactive webpages.
+
+Syntax
+document.createElement("tag_name");
+
+-->
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>createElement Example</title>
+</head>
+<body>
+
+  <button onclick="createPara()">
+    Click Here
+  </button>
+
+  <script>
+
+    function createPara() {
+
+      // Creating element
+      let element =
+        document.createElement("p");
+
+      // Adding text
+      element.innerText =
+        "This is a new paragraph";
+
+      // Adding element to body
+      document.body.appendChild(element);
+    }
+
+  </script>
+
+</body>
+</html>

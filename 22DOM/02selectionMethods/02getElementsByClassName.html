@@ -1,0 +1,34 @@
+<!-- 
+getElementsByClassName() is a DOM method used to select HTML elements by their class name.
+It returns a collection of all elements that have the specified class.
+Multiple elements can have the same class name.
+JavaScript can use this method to access and modify those elements. 
+
+Syntax
+document.getElementsByClassName("class_name");
+
+-->
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Class Name Example</title>
+</head>
+<body>
+
+  <p class="demo">First Paragraph</p>
+  <p class="demo">Second Paragraph</p>
+
+  <button onclick="changeText()">Click Here</button>
+
+  <script>
+    function changeText() {
+      let elements = document.getElementsByClassName("demo");
+
+      elements[0].innerHTML = "Changed First Paragraph";
+      elements[1].innerHTML = "Changed Second Paragraph";
+    }
+  </script>
+
+</body>
+</html>

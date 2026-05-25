@@ -1,0 +1,47 @@
+<!-- 
+removeAttribute() is a DOM method used to remove an attribute from an HTML element.
+It helps JavaScript delete attributes such as class, style, href, title, and more.
+After removing the attribute, the element no longer contains that property.
+This method is useful for dynamically changing webpage behavior and design.
+
+Syntax
+element.removeAttribute("attribute_name");
+
+-->
+
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>removeAttribute Example</title>
+</head>
+<body>
+
+  <a id="link"
+     href="https://example.com"
+     title="Visit Website"
+     style="color:white; background-color:blue; padding:10px;">
+     
+     Open Website
+  </a>
+
+  <br><br>
+
+  <button onclick="removeAttr()">Click Here</button>
+
+  <script>
+    function removeAttr() {
+
+      let element = document.getElementById("link");
+
+      // Removing attributes
+      element.removeAttribute("href");
+      element.removeAttribute("title");
+      element.removeAttribute("style");
+
+      alert("Attributes Removed");
+    }
+  </script>
+
+</body>
+</html>

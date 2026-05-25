@@ -1,0 +1,31 @@
+<!-- 
+innerHTML is a property used to get or change the HTML content inside an element.
+It can read the existing content or replace it with new content.
+Using innerHTML, JavaScript can dynamically update webpage elements.
+It is commonly used to change text, add HTML tags, or display data.
+
+Syntax
+element.innerHTML
+element.innerHTML = "New Content";
+
+ -->
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>innerHTML Example</title>
+</head>
+<body>
+
+  <h1 id="demo">Hello World</h1>
+
+  <button onclick="changeText()">Click Here</button>
+
+  <script>
+    function changeText() {
+      document.getElementById("demo").innerHTML = "Welcome to JavaScript";
+    }
+  </script>
+
+</body>
+</html>

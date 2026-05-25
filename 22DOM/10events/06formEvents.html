@@ -1,0 +1,95 @@
+<!-- 
+Form events are events that occur when the user interacts with form elements like input boxes, forms, and select fields.
+JavaScript uses form events to validate data and create interactive forms.
+These events help detect typing, selecting, focusing, and submitting form data.
+Form events are commonly used in login forms and registration forms.
+
+Common Form Events
+
+Event	        Description
+. submit	    . Occurs when form is submitted
+. change	    . Occurs when input value changes
+. focus	        . Occurs when input gets focus
+. blur	        . Occurs when input loses focus
+
+-->
+
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Form Events Example</title>
+  <style>
+    .box {
+      width: 300px;
+      padding: 10px;
+      margin: 10px;
+      border: 2px solid blue;
+      font-size: 18px;
+    }
+  </style>
+</head>
+
+<body>
+  <form id="myForm">
+    <input
+      type="text"
+      id="name"
+      class="box"
+      placeholder="Enter Name"
+    >
+    <br>
+    <select id="course" class="box">
+      <option>JavaScript</option>
+      <option>Python</option>
+      <option>Java</option>
+    </select>
+    <br>
+    <button type="submit" class="box">
+      Submit
+    </button>
+  </form>
+  <h2 id="result">
+    Event Output
+  </h2>
+  <script>
+    let input =
+      document.getElementById("name");
+
+    let select =
+      document.getElementById("course");
+
+    let form =
+      document.getElementById("myForm");
+
+    let result =
+      document.getElementById("result");
+    // focus event
+    input.addEventListener("focus", function() {
+        result.innerText = "Focus Event";
+        input.style.backgroundColor = "lightyellow";
+      }
+    );
+
+    // blur event
+    input.addEventListener("blur", function() {
+        result.innerText = "Blur Event";
+        input.style.backgroundColor = "white";
+      }
+    );
+
+    // change event
+    select.addEventListener("change", function() {
+        result.innerText = "Change Event : " + select.value;
+      }
+    );
+
+    // submit event
+    form.addEventListener("submit", function(event) {
+        event.preventDefault();
+        result.innerText = "Form Submitted Successfully";
+      }
+    );
+  </script>
+</body>
+</html>

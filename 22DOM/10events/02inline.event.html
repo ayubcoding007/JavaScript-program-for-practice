@@ -1,0 +1,54 @@
+
+<!-- Inline events are events written directly inside HTML tags using event attributes such as onclick, onmouseover, and onmouseout.
+When the event occurs, the specified JavaScript code or function executes immediately.
+Inline events are simple and easy for beginners to understand.
+They are commonly used for small programs and basic event handling.
+
+<tag event="JavaScript code">
+-->
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Inline Event Example</title>
+
+  <style>
+
+    .box {
+      padding: 10px;
+      border: 2px solid blue;
+      font-size: 25px;
+      width: 300px;
+      text-align: center;
+    }
+
+  </style>
+
+</head>
+
+<body>
+
+  <h1 id="text" class="box">
+    Hello World
+  </h1>
+
+  <!-- Inline click event -->
+  <button onclick="changeText()">
+    Click Here
+  </button>
+
+  <script>
+
+    function changeText() {
+
+      document.getElementById("text").innerText =
+        "Inline Event Executed";
+
+      document.getElementById("text").style.color =
+        "red";
+    }
+
+  </script>
+
+</body>
+</html>

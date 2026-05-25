@@ -1,0 +1,56 @@
+<!-- 
+event.target is a property of the Event Object used to identify the HTML element that triggered the event.
+It returns the exact element on which the event occurred.
+This property is very useful in event handling and event delegation.
+It helps JavaScript know which element the user interacted with.
+
+User Clicks Element
+        |
+        v
+ Event Occurs
+        |
+        v
+event.target
+        |
+        v
+Returns Clicked Element
+
+Syntax
+event.target
+
+ -->
+
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Event Target Example</title>
+  <style>
+    .box {
+      width: 300px;
+      padding: 20px;
+      border: 2px solid blue;
+      text-align: center;
+      font-size: 25px;
+      margin: 20px;
+    }
+  </style>
+</head>
+<body>
+  <button id="btn" class="box">
+    Click Here
+  </button>
+  <h2 id="result">
+    Event Target Output
+  </h2>
+  <script>
+    let button = document.getElementById("btn");
+    let result = document.getElementById("result");
+    // Using event.target
+    button.addEventListener("click", function(event) {
+        result.innerText = "Clicked Element : " + event.target.tagName;
+      }
+    );
+  </script>
+</body>
+</html>

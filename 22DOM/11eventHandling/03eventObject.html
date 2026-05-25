@@ -1,0 +1,70 @@
+<!-- 
+The Event Object is an object automatically created when an event occurs in JavaScript.
+It contains information about the event, such as event type, target element, mouse position, and keyboard key.
+The event object is passed as a parameter to the event handler function.
+It helps developers control and manage events dynamically.
+
+User Action
+     |
+     v
+   Event
+(click, keydown, mouseover)
+     |
+     v
+ Event Object Created
+     |
+     v
+Information About Event
+(type, target, key, mouse position)
+
+element.addEventListener("event", function(event) {
+    // code
+  }
+);
+
+
+Common Event Object Properties
+
+Property	        Description
+. event.type	    . Returns event type
+. event.target	    . Returns target element
+. event.key	        . Returns pressed key
+. event.clientX	    . Mouse X position
+. event.clientY	    . Mouse Y position
+
+-->
+
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Event Object Example</title>
+  <style>
+    .box {
+      width: 300px;
+      padding: 20px;
+      border: 2px solid blue;
+      text-align: center;
+      font-size: 25px;
+      margin: 20px;
+    }
+  </style>
+</head>
+<body>
+  <button id="btn" class="box">
+    Click Here
+  </button>
+  <h2 id="result">
+    Event Information
+  </h2>
+  <script>
+    let button = document.getElementById("btn");
+    let result = document.getElementById("result");
+    // Event object example
+    button.addEventListener("click", function(event) {
+        result.innerText = "Event Type : " + event.type + " | Target : " + event.target.tagName;
+      }
+    );
+  </script>
+</body>
+</html>

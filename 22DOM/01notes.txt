@@ -1,0 +1,27 @@
+DOM
+
+The DOM (Document Object Model) is a programming interface for HTML and XML documents.
+It represents a web page as a tree-like structure of objects and elements.
+Using the DOM, JavaScript can access, modify, add, or delete HTML elements dynamically.
+It acts as a bridge between web pages and JavaScript, making webpages interactive.
+
+
+DOM Tree
+
+A DOM Tree is a hierarchical structure created by the browser from an HTML document.
+Each HTML element becomes a node in the tree.
+The document object is the root node, and all elements are connected as parent, child, 
+and sibling nodes.
+JavaScript uses the DOM Tree to access and manipulate webpage elements dynamically.
+
+                     Document
+                         |
+                      <html>
+                     /      \
+                <head>     <body>
+                   |       /   |    \
+               <title>  <h1>  <p>  <button>
+                   |      |     |       |
+               "My Page" "Hello" "Welcome to DOM" "Click"
+
+

@@ -1,0 +1,38 @@
+<!-- 
+Computed Styles are the final CSS styles applied to an HTML element after all CSS rules are processed by the browser.
+JavaScript uses getComputedStyle() to get these styles.
+It helps read the actual style values of an element, such as color, width, height, or font size.
+Computed styles are mainly used to check or analyze element styles dynamically.
+
+Syntax
+getComputedStyle(element);
+
+-->
+
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Computed Style Example</title>
+</head>
+<body>
+
+  <h1 id="demo" style="color: blue; font-size: 40px;">
+    Hello World
+  </h1>
+
+  <button onclick="showStyle()">Click Here</button>
+
+  <script>
+    function showStyle() {
+      let element = document.getElementById("demo");
+
+      let styles = getComputedStyle(element);
+
+      alert("Color: " + styles.color);
+      alert("Font Size: " + styles.fontSize);
+    }
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!-- 
+getAttributeNode() is a DOM method used to get the complete attribute node of an HTML element.
+It returns an Attr object containing both the attribute name and value.
+This method is useful when we need detailed information about an attribute.
+If the attribute does not exist, it returns null.
+
+element.getAttributeNode("attribute_name");
+
+-->
+
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>getAttributeNode Example</title>
+</head>
+<body>
+
+  <a id="link"
+     href="https://example.com"
+     title="Visit Website">
+     
+     Open Website
+  </a>
+
+  <br><br>
+
+  <button onclick="showNode()">
+    Click Here
+  </button>
+
+  <script>
+
+    function showNode() {
+
+      let element =
+        document.getElementById("link");
+
+      // Getting attribute node
+      let attrNode =
+        element.getAttributeNode("href");
+
+      // Displaying name and value
+      alert(
+        "Attribute Name : " +
+        attrNode.name + "\n\n" +
+
+        "Attribute Value : " +
+        attrNode.value
+      );
+    }
+
+  </script>
+
+</body>
+</html>

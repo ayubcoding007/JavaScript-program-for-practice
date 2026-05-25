@@ -1,0 +1,54 @@
+<!-- 
+classList.remove() is a DOM method used to remove one or more CSS classes from an HTML element.
+It helps JavaScript remove styles dynamically from elements.
+If the class does not exist, no error occurs.
+This method is commonly used for interactive webpage design and styling control.
+
+Syntax
+element.classList.remove("class_name");
+
+-->
+
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>classList.remove Example</title>
+
+  <style>
+
+    .demo {
+      color: white;
+      background-color: blue;
+      padding: 10px;
+      font-size: 30px;
+    }
+
+  </style>
+
+</head>
+<body>
+
+  <h1 id="text" class="demo">
+    Hello World
+  </h1>
+
+  <button onclick="removeClass()">
+    Click Here
+  </button>
+
+  <script>
+
+    function removeClass() {
+
+      let element =
+        document.getElementById("text");
+
+      // Removing class
+      element.classList.remove("demo");
+    }
+
+  </script>
+
+</body>
+</html> 

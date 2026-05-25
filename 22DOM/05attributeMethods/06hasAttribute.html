@@ -1,0 +1,40 @@
+<!-- 
+hasAttribute() is a DOM method used to check whether an HTML element contains a specific attribute or not.
+It returns true if the attribute exists and false if it does not exist.
+This method helps JavaScript verify attributes before using or changing them.
+It is commonly used in dynamic webpage development.
+
+Syntax
+element.hasAttribute("attribute_name");
+
+-->
+
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>hasAttribute Example</title>
+</head>
+<body>
+
+  <a id="link" href="https://example.com">
+    Open Website
+  </a>
+
+  <br><br>
+
+  <button onclick="checkAttribute()">Click Here</button>
+
+  <script>
+    function checkAttribute() {
+
+      let element = document.getElementById("link");
+
+      let result = element.hasAttribute("href");
+
+      alert(result);
+    }
+  </script>
+
+</body>
+</html>

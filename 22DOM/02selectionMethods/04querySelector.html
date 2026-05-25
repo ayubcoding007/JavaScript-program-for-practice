@@ -1,0 +1,32 @@
+<!-- 
+querySelector() is a DOM method used to select the first HTML element that matches a specified CSS selector.
+It can select elements using id, class, tag name, or other CSS selectors.
+This method returns only the first matching element.
+JavaScript uses it to access and manipulate webpage elements easily.
+
+Syntax
+document.querySelector("selector");
+
+ -->
+
+ <!DOCTYPE html>
+<html>
+<head>
+  <title>querySelector Example</title>
+</head>
+<body>
+
+  <h1 class="demo">Hello World</h1>
+
+  <button onclick="changeText()">Click Here</button>
+
+  <script>
+    function changeText() {
+      let element = document.querySelector(".demo");
+
+      element.innerHTML = "Welcome to JavaScript";
+    }
+  </script>
+
+</body>
+</html>
