@@ -1,0 +1,49 @@
+<!-- 
+matches() is a DOM method used to check whether an HTML element matches a specified CSS selector or not.
+It returns true if the element matches the selector.
+It returns false if the element does not match the selector.
+This method is useful for checking classes, IDs, tags, and attributes dynamically.
+
+Graphical Flow
+
+HTML Element
+      |
+      v
+matches("CSS Selector")
+      |
+      v
+true / false
+
+Syntax
+element.matches("selector");
+-->
+
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>matches Example</title>
+  <style>
+    .demo {
+      color: red;
+      font-size: 30px;
+    }
+  </style>
+</head>
+
+<body>
+  <h1 id="title" class="demo">Hello World</h1>
+  <button onclick="checkMatch()">Check Match</button>
+  <h2 id="result">Output</h2>
+  <script>
+    function checkMatch() {
+      // Selecting element
+      let element = document.getElementById("title");
+      // Checking selector match
+      let result = element.matches(".demo");
+      // Showing result
+      document.getElementById("result").innerText = "Matches Result : " + result;
+    }
+  </script>
+</body>
+</html>

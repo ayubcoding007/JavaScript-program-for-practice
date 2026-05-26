@@ -1,0 +1,79 @@
+<!-- 
+stopPropagation() is a method of the Event Object used to stop event bubbling or event capturing in JavaScript.
+It prevents the event from moving to parent or child elements in the DOM tree.
+This method helps control event flow in nested elements.
+It is commonly used when we want only one element to handle the event.
+
+Graphical View
+<body>
+   |
+   v
+<div>        ← Parent
+   |
+   v
+<button>     ← Child Clicked
+
+Without stopPropagation()
+
+button
+   ↑
+div
+   ↑
+body
+
+With stopPropagation()
+
+button
+   x
+Event Stops Here
+
+Syntax
+event.stopPropagation();
+
+ -->
+
+ <!DOCTYPE html>
+<html>
+<head>
+  <title>stopPropagation Example</title>
+  <style>
+    .parent {
+      padding: 40px;
+      background-color: lightblue;
+    }
+    .child {
+      padding: 20px;
+      background-color: yellow;
+      border: none;
+      font-size: 20px;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="parent" class="parent">
+    Parent Div
+    <br><br>
+    <button id="child" class="child">
+      Click Me
+    </button>
+  </div>
+
+  <script>
+    let parent = document.getElementById("parent");
+    let child = document.getElementById("child");
+    // Parent event
+    parent.addEventListener("click", function() {
+        alert("Parent Div Clicked");
+      }
+    );
+    // Child event
+    child.addEventListener("click", function(event) {
+        alert("Button Clicked");
+        // Stop bubbling
+        event.stopPropagation();
+      }
+    );
+  </script>
+</body>
+</html>

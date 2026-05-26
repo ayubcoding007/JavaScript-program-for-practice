@@ -1,0 +1,157 @@
+<!-- 
+form.elements is a DOM property used to access all form controls inside a form.
+It returns a collection of input fields, buttons, selects, textareas, and other form elements.
+Elements can be accessed using index numbers or element names.
+This property helps JavaScript manage and validate form data easily.
+
+Graphical View
+<form>
+   |
+   |---- input
+   |---- password
+   |---- select
+   |---- button
+        |
+        v
+   form.elements
+
+Syntax
+form.elements
+
+Access by Index
+. form.elements[0]
+
+Access by Name
+. form.elements["username"]
+-->
+
+
+
+
+<!-- Access by Name -->
+
+
+<!-- 
+<!DOCTYPE html>
+<html>
+<head>
+  <title>form.elements Example</title>
+
+  <style>
+
+    .box {
+      padding: 10px;
+      margin: 10px;
+      font-size: 20px;
+      border: 2px solid blue;
+    }
+
+  </style>
+
+</head>
+
+<body>
+
+  <form id="myForm">
+    <input
+      type="text"
+      name="username"
+      class="box"
+      placeholder="Enter Username"
+    > 
+    <br>
+    <input
+      type="password"
+      name="password"
+      class="box"
+      placeholder="Enter Password"
+    >
+    <br>
+    <button type="button" onclick="showData()" class="box">Submit</button>
+
+  </form>
+  <h2 id="result">Output </h2>
+  <script>
+
+    function showData() {
+      // Access form
+      let form = document.getElementById("myForm");
+      // Accessing form elements
+      let username = form.elements["username"].value;
+      let password = form.elements["password"].value;
+      // Showing result
+      document.getElementById("result").innerText = "Username : " + username + " | Password : " + password;
+    }
+  </script>
+</body>
+</html> -->
+
+
+
+
+<!-- Access by Index -->
+
+<!-- form.elements[0] is used to access form elements by index number.
+The index starts from 0, where the first form element has index 0, second has index 1, and so on.
+This method is useful when accessing form controls in order.
+It works with all form elements like input, button, select, and textarea.
+
+Graphical View
+
+<form>
+Index 0 → Username Input
+Index 1 → Password Input
+Index 2 → Button
+</form>
+
+Syntax
+form.elements[index] -->
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>form.elements[index] Example</title>
+  <style>
+    .box {
+      padding: 10px;
+      margin: 10px;
+      font-size: 20px;
+      border: 2px solid blue;
+    }
+  </style>
+</head>
+
+<body>
+
+  <form id="myForm">
+    <input
+      type="text"
+      class="box"
+      placeholder="Enter Username"
+    >
+    <br>
+    <input
+      type="password"
+      class="box"
+      placeholder="Enter Password"
+    >
+    <br>
+    <button type="button" onclick="showData()" class="box">Submit</button>
+
+  </form>
+  <h2 id="result">Output</h2>
+
+  <script>
+    function showData() {
+      // Access form
+      let form = document.getElementById("myForm");
+      // Accessing elements using index
+      let username = form.elements[0].value;
+      let password = form.elements[1].value;
+
+      // Showing result
+      document.getElementById("result").innerText = "Username : " + username + " | Password : " + password;
+    }
+  </script>
+</body>
+</html>

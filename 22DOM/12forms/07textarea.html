@@ -1,0 +1,49 @@
+<!-- 
+A textarea is an HTML form element used to enter multiple lines of text.
+It is commonly used for comments, messages, descriptions, and feedback forms.
+JavaScript can access and control textarea content using the value property.
+Textarea supports large text input compared to normal input fields.
+
+Syntax
+
+Get Textarea Value
+. textarea.value
+
+Set Textarea Value
+. textarea.value = "Hello";
+
+-->
+
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Textarea Example</title>
+  <style>
+    .box {
+      width: 300px;
+      padding: 10px;
+      margin: 10px;
+      font-size: 20px;
+      border: 2px solid blue;
+    }
+  </style>
+</head>
+
+<body>
+  <textarea id="message" class="box" rows="5" placeholder="Enter Message"></textarea>
+  <br>
+  <button onclick="showMessage()" class="box">Show Message</button>
+  <h2 id="result">Output</h2>
+  <script>
+    function showMessage() {
+      // Selecting textarea
+      let textarea = document.getElementById("message");
+      // Getting textarea value
+      let data = textarea.value;
+      // Showing result
+      document.getElementById("result").innerText = "Message : " + data;
+    }
+  </script>
+</body>
+</html>

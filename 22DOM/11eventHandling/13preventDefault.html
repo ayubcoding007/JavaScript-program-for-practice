@@ -1,0 +1,64 @@
+<!-- 
+preventDefault() is a method of the Event Object used to stop the default behavior of an HTML element.
+It prevents the browser from performing its normal action.
+This method is commonly used in forms, links, and buttons.
+It helps developers control webpage behavior using JavaScript.
+
+Graphical Flow
+User Action
+     |
+     v
+Default Browser Action
+(form submit, link open)
+     |
+     v
+preventDefault()
+     |
+     v
+Default Action Stopped
+
+Syntax
+event.preventDefault();
+
+-->
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>preventDefault Example</title>
+  <style>
+    .box {
+      padding: 15px;
+      font-size: 20px;
+      border: 2px solid blue;
+      margin: 20px;
+    }
+  </style>
+</head>
+<body>
+  <form id="myForm">
+    <input
+      type="text"
+      class="box"
+      placeholder="Enter Name"
+    >
+    <button type="submit" class="box">
+      Submit
+    </button>
+  </form>
+  <h2 id="result">
+    Form Output
+  </h2>
+  <script>
+    let form = document.getElementById("myForm");
+    let result = document.getElementById("result");
+    // Form submit event
+    form.addEventListener("submit", function(event) {
+        // Stop form submission
+        event.preventDefault();
+        result.innerText = "Form Submission Prevented";
+      }
+    );
+  </script>
+</body>
+</html>

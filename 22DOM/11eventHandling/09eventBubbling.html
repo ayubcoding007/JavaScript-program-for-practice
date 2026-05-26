@@ -1,0 +1,71 @@
+<!-- 
+Event Bubbling is a process where an event starts from the target element and then moves upward through 
+its parent elements in the DOM tree.
+It means the innermost element handles the event first, then its parent, then grandparent, and so on.
+Event bubbling is the default behavior in JavaScript events.
+It helps in event delegation and handling multiple elements efficiently.
+
+Graphical View
+<body>
+   |
+   v
+<div>        ← Parent
+   |
+   v
+<button>     ← Child Clicked
+Bubbling Order
+button
+   ↑
+div
+   ↑
+body
+
+Important Point
+. By default, most events in JavaScript use bubbling phase.
+
+-->
+
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Event Bubbling Example</title>
+  <style>
+    .parent {
+      padding: 40px;
+      background-color: lightblue;
+    }
+    .child {
+      padding: 20px;
+      background-color: yellow;
+      border: none;
+      font-size: 20px;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="parent" class="parent">
+    Parent Div
+    <br><br>
+    <button id="child" class="child">
+      Click Me
+    </button>
+  </div>
+
+  <script>
+    let parent = document.getElementById("parent");
+    let child = document.getElementById("child"); 
+    // Parent event
+    parent.addEventListener("click", function() {
+        alert("Parent Div Clicked");
+      }
+    );
+    // Child event
+    child.addEventListener("click", function() {
+        alert("Button Clicked");
+      }
+    );
+  </script>
+</body>
+</html>

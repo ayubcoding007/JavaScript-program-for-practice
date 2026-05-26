@@ -1,0 +1,65 @@
+<!-- 
+Input value means the data entered by the user inside an input field.
+JavaScript uses the value property to get or set the value of input elements.
+It is commonly used in forms, validations, login systems, and user input handling.
+The value property works with textboxes, passwords, radio buttons, checkboxes, and more.
+
+Graphical Flow
+
+User Types Data
+       |
+       v
+<input>
+       |
+       v
+input.value
+       |
+       v
+Get / Set Value
+
+Syntax
+
+Get Value
+. input.value
+
+Set Value
+. input.value = "JavaScript";
+--> 
+
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Input Value Example</title>
+  <style>
+    .box {
+      padding: 10px;
+      margin: 10px;
+      font-size: 20px;
+      border: 2px solid blue;
+    }
+  </style>
+</head>
+
+<body>
+
+  <input
+    type="text"
+    id="username"
+    class="box"
+    placeholder="Enter Name"
+    >
+  <button onclick="showValue()" class="box">Show Value</button>
+  <h2 id="result">Output</h2>
+  <script>
+    function showValue() {
+      // Selecting input
+      let input = document.getElementById("username");
+      // Getting input value
+      let data = input.value;
+      // Showing result
+      document.getElementById("result").innerText = "Entered Value : " + data;
+    }
+  </script>
+</body>
+</html>

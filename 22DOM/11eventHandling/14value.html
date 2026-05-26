@@ -1,0 +1,68 @@
+<!-- 
+value is a DOM property used to get or set the value of form elements such as input, 
+textarea, and select.
+It helps JavaScript read user input and change input values dynamically.
+This property is commonly used in forms and validations.
+value works with textboxes, radio buttons, checkboxes, and dropdown lists.
+
+
+Graphical Flow
+
+User Input
+     |
+     v
+ input element
+     |
+     v
+element.value
+     |
+     v
+Get or Set Value
+
+Syntax
+element.valu
+
+Set Value
+element.value = "New Value";
+
+ -->
+
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>value Property Example</title>
+  <style>
+    .box {
+      padding: 10px;
+      font-size: 20px;
+      margin: 10px;
+      border: 2px solid blue;
+    }
+  </style>
+</head>
+<body>
+  <input
+    type="text"
+    id="inputBox"
+    class="box"
+    placeholder="Enter Name"
+  >
+  <button onclick="showValue()" class="box">
+    Show Value
+  </button>
+  <h2 id="result">
+    Output
+  </h2>
+  <script>
+    function showValue() {
+      // Selecting input
+      let input = document.getElementById("inputBox");
+      // Getting value
+      let data = input.value;
+      // Showing value
+      document.getElementById("result").innerText = "Entered Value : " + data;
+    }
+  </script>
+</body>
+</html>

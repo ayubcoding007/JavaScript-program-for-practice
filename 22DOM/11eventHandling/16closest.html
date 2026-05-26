@@ -1,0 +1,71 @@
+<!-- 
+closest() is a DOM method used to find the nearest ancestor (parent) element that matches a specified CSS selector.
+It starts checking from the current element and moves upward in the DOM tree.
+If a matching ancestor is found, it returns that element.
+If no matching element exists, it returns null.
+
+Graphical View
+
+<div class="grandparent">
+      |
+      v
+<div class="parent">
+      |
+      v
+<button id="child">
+
+Searching
+
+child.closest(".parent")
+          |
+          v
+Returns Parent Div
+
+Syntax
+element.closest("selector");
+
+-->
+
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>closest Example</title>
+  <style>
+    .grandparent {
+      padding: 30px;
+      background-color: lightblue;
+    }
+    .parent {
+      padding: 30px;
+      background-color: lightgreen;
+    }
+    .child {
+      padding: 15px;
+      font-size: 20px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="grandparent">
+    Grandparent
+    <div class="parent">
+      Parent
+      <br><br>
+      <button id="child" class="child">Click Here</button>
+    </div>
+  </div>
+  <h2 id="result">Output</h2>
+  <script>
+    let button = document.getElementById("child");
+    button.addEventListener("click", function() {
+        // Finding closest parent
+        let data = button.closest(".parent");
+        document.getElementById("result").innerText = "Closest Element : " + data.className;
+      }
+    );
+  </script>
+</body>
+</html>
+

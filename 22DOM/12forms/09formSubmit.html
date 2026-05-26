@@ -1,0 +1,65 @@
+<!-- 
+Form submit is the process of sending form data to the server or processing it using JavaScript.
+When a user clicks the submit button, the submit event occurs.
+JavaScript can handle the submit event to validate data or stop page reload using preventDefault().
+Form submission is commonly used in login, registration, and contact forms.
+
+Flow
+
+User Fills Form
+       |
+       v
+Click Submit Button
+       |
+       v
+submit Event
+       |
+       v
+Form Data Processed
+
+Syntax
+
+form.addEventListener("submit", function(event) {
+    //code
+  }
+);
+ -->
+
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Form Submit Example</title>
+  <style>
+    .box {
+      padding: 10px;
+      margin: 10px;
+      font-size: 20px;
+      border: 2px solid blue;
+    }
+  </style>
+</head>
+
+<body>
+  <form id="myForm">
+    <input type="text" id="username" class="box" placeholder="Enter Username">
+    <br>
+    <button type="submit" class="box">Submit</button>
+  </form>
+  <h2 id="result">Output</h2>
+  <script>
+    // Selecting form
+    let form = document.getElementById("myForm");
+    // Submit event
+    form.addEventListener("submit", function(event) {
+        // Stop page reload
+        event.preventDefault();
+        // Getting input value
+        let username = document.getElementById("username").value;
+        // Showing result
+        document.getElementById("result").innerText = "Form Submitted : " + username;
+      }
+    );
+  </script>
+</body>
+</html>

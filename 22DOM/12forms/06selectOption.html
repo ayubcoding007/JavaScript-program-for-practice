@@ -1,0 +1,53 @@
+<!-- 
+A select option is an HTML form element used to create a dropdown list of choices.
+Users can select one or more options from the dropdown menu.
+JavaScript uses the value, selectedIndex, and options properties to work with select elements.
+Select options are commonly used in forms, country lists, course selections, and menus.
+
+Syntax
+
+Get Selected Value
+. select.value
+
+Get Selected Index
+. select.selectedIndex
+ -->
+
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Select Option Example</title>
+  <style>
+    .box {
+      padding: 10px;
+      margin: 10px;
+      font-size: 20px;
+      border: 2px solid blue;
+    }
+  </style>
+</head>
+
+<body>
+  <select id="course" class="box">
+    <option value="JavaScript">JavaScript</option>
+    <option value="Python">Python</option>
+    <option value="Java">Java</option>
+  </select>
+  <br>
+  <button onclick="showOption()" class="box">Show Selected</button>
+  <h2 id="result">Output</h2>
+  <script>
+    function showOption() {
+      // Selecting dropdown
+      let select = document.getElementById("course");
+      // Getting selected value
+      let value = select.value;
+      // Getting selected index
+      let index = select.selectedIndex;
+      // Showing result
+      document.getElementById("result").innerText = "Selected Value : " + value + " | Selected Index : " + index;
+    }
+  </script>
+</body>
+</html>

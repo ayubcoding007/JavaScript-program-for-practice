@@ -1,0 +1,79 @@
+<!-- 
+stopImmediatePropagation() is a method of the Event Object used to stop event bubbling and also 
+stop other event handlers on the same element.
+When this method is used, no further event listeners execute for that event.
+It provides more control than stopPropagation().
+This method is useful when only one event handler should run.
+
+Graphical View
+Button
+   |
+   |---- Event 1 -> true
+   |
+   |---- Event 2 -> false
+   |
+   |---- Parent Event -> false
+
+
+Difference
+
+Method	                            Stops Bubbling	        Stops Other Same Events
+stopPropagation()	                Yes	                    No
+stopImmediatePropagation()	        Yes	                    Yes
+
+Syntax
+event.stopImmediatePropagation();
+
+-->
+
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>stopImmediatePropagation Example</title>
+
+  <style>
+    .box, .box2 {
+      padding: 20px;
+      font-size: 20px;
+      border: 2px solid blue;
+      margin: 20px;
+    }
+  </style>
+</head>
+
+<body>
+  <button id="btn" class="box">
+    Click Here
+  </button>
+
+  <button id="btn2" class="box2">
+    Click Here | btn 2
+  </button>
+
+  <script>
+    let button = document.getElementById("btn");
+    // First event
+    button.addEventListener("click", function(event) {
+        alert("First Event Executed");
+        // Stop all next events
+        event.stopImmediatePropagation();
+      }
+    );
+    // Second event
+    button.addEventListener("click", function() {
+        alert("Second Event Executed");
+      }
+    );
+
+    // btn 2 event
+    let button2 = document.getElementById("btn2");
+    button2.addEventListener("click", function(event) {
+        alert("btn2 Event Executed");
+        // Stop all next events
+        // event.stopImmediatePropagation();
+      }
+    );
+  </script>
+</body>
+</html>

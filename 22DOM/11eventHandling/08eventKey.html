@@ -1,0 +1,62 @@
+<!-- 
+event.key is a property of the Keyboard Event Object.
+It returns the value of the key pressed by the user on the keyboard.
+This property helps JavaScript detect which key was pressed during keyboard events.
+It is commonly used in forms, games, shortcuts, and validation.
+
+Graphical Flow
+
+User Presses Key
+        |
+        v
+ Keyboard Event
+(keydown, keyup, keypress)
+        |
+        v
+event.key
+        |
+        v
+Returns Pressed Key
+
+Syntax
+event.key
+
+-->
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>event.key Example</title>
+  <style>
+    .box {
+      width: 300px;
+      padding: 15px;
+      border: 2px solid blue;
+      font-size: 20px;
+      margin: 20px;
+    }
+  </style>
+</head>
+
+<body>
+  <input
+    type="text"
+    id="inputBox"
+    class="box"
+    placeholder="Press Any Key"
+  >
+
+  <h2 id="result">
+    Pressed Key
+  </h2>
+  <script>
+    let input = document.getElementById("inputBox");
+    let result = document.getElementById("result");
+    // Keyboard event
+    input.addEventListener("keydown", function(event) {
+        result.innerText = "Pressed Key : " + event.key;
+      }
+    );
+  </script>
+</body>
+</html>

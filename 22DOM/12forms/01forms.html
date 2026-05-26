@@ -1,0 +1,86 @@
+<!-- Forms in DOM are HTML form elements that JavaScript can access and control dynamically.
+The DOM provides properties and methods to work with forms, input fields, buttons, checkboxes, and dropdowns.
+Using JavaScript, we can get form values, validate data, submit forms, and modify form elements dynamically.
+Forms are commonly used for login pages, registration pages, and user input systems.
+
+Graphical View
+HTML Form
+    |
+    v
+DOM Access
+(document.forms)
+    |
+    v
+Form Elements
+(input, button, select)
+    |
+    v
+Get / Set Values
+
+Accessing Forms in DOM
+
+Using document.forms
+. document.forms
+
+Access Form by Index
+. document.forms[0]
+
+Access Form by Name
+. document.forms["myForm"]
+
+-->
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Forms in DOM Example</title>
+  <style>
+    .box {
+      padding: 10px;
+      margin: 10px;
+      font-size: 20px;
+      border: 2px solid blue;
+    }
+  </style>
+</head>
+
+<body>
+  <form name="myForm">
+    <input
+      type="text"
+      name="username"
+      class="box"
+      placeholder="Enter Name"
+    >
+    <br>
+    <input
+      type="password"
+      name="password"
+      class="box"
+      placeholder="Enter Password"
+    >
+    <br>
+    <button
+      type="button"
+      onclick="showData()"
+      class="box"
+    >
+      Submit
+    </button>
+  </form>
+  <h2 id="result">
+    Output
+  </h2>
+  <script>
+    function showData() {
+      // Accessing form
+      let form = document.forms["myForm"];
+      // Getting input values
+      let username = form["username"].value;
+      let password = form["password"].value;
+      // Showing result
+      document.getElementById("result").innerText = "Username : " + username + " | Password : " + password;
+    }
+  </script>
+</body>
+</html>

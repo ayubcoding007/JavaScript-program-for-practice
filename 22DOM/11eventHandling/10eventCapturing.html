@@ -1,0 +1,74 @@
+<!-- 
+Event Capturing is a process where an event starts from the top parent element and moves downward to the target element in the DOM tree.
+It is the opposite of Event Bubbling.
+In capturing phase, parent elements handle the event before the child element.
+To enable capturing, addEventListener() uses the third parameter as true.
+
+Graphical View
+
+<body>
+   |
+   v
+<div>        ← Parent
+   |
+   v
+<button>     ← Child
+
+Capturing Order
+
+body
+   ↓
+div
+   ↓
+button
+
+Syntax
+element.addEventListener("click", function() {
+    // Code
+  },true
+);
+
+-->
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Event Capturing Example</title>
+  <style>
+    .parent {
+      padding: 40px;
+      background-color: lightblue;
+    }
+    .child {
+      padding: 20px;
+      background-color: yellow;
+      border: none;
+      font-size: 20px;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="parent" class="parent">
+    Parent Div
+    <br><br>
+    <button id="child" class="child">
+      Click Me
+    </button>
+  </div>
+  <script>
+    let parent = document.getElementById("parent");
+    let child = document.getElementById("child");
+    // Parent capturing event
+    parent.addEventListener("click", function() {
+        alert("Parent Div Clicked");
+      }, true
+    );
+    // Child capturing event
+    child.addEventListener("click", function() {
+        alert("Button Clicked");
+      }, true
+    );
+  </script>
+</body>
+</html>

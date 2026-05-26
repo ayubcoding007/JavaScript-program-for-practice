@@ -1,0 +1,97 @@
+<!-- 
+Form validation is the process of checking whether user input is correct and complete before submitting a form.
+JavaScript validation helps prevent empty fields, invalid data, and incorrect formats.
+It improves data accuracy and user experience.
+Validation is commonly used in login forms, registration forms, and contact forms.
+
+Flow
+
+User Input
+     |
+     v
+Validation Check
+     |
+     |---- Correct Data ✅
+     |         |
+     |         v
+     |     Form Submitted
+     |
+     |---- Wrong Data ❌
+               |
+               v
+         Error Message
+
+
+
+Common Validation Checks
+
+Validation	            Purpose
+. Empty Field	        . Checks blank input
+. Length Check	        . Checks minimum characters
+. Email Format	        . Checks valid email
+. Password Check	    . Checks password rules         
+
+-->
+
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Form Validation Example</title>
+  <style>
+    .box {
+      padding: 10px;
+      margin: 10px;
+      font-size: 20px;
+      border: 2px solid blue;
+    }
+    #error {
+      color: red;
+    }
+  </style>
+</head>
+
+<body>
+  <form id="myForm">
+    <input
+      type="text"
+      id="username"
+      class="box"
+      placeholder="Enter Username"
+    >
+    <br>
+    <input
+      type="password"
+      id="password"
+      class="box"
+      placeholder="Enter Password"
+      >
+    <br>
+    <button type="submit" class="box">Submit</button>
+  </form>
+  <h2 id="error"></h2>
+
+  <script>
+    let form = document.getElementById("myForm");
+    form.addEventListener("submit", function(event) {
+        // Prevent form submit
+        event.preventDefault();
+        let username = document.getElementById("username").value;
+        let password = document.getElementById("password").value;
+        let error = document.getElementById("error");
+        // Validation
+        if(username === "") {
+          error.innerText = "Username is Required";
+        }
+        else if(password.length < 6) {
+          error.innerText = "Password must be 6 characters";
+        }
+        else {
+          error.style.color = "green";
+          error.innerText = "Form Submitted Successfully";
+        }
+      }
+    );
+  </script>
+</body>
+</html>

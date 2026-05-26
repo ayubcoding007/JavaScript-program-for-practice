@@ -1,0 +1,59 @@
+<!-- 
+A radio button is an HTML form element used to select only one option from multiple choices.
+Radio buttons with the same name belong to one group.
+JavaScript uses the checked property to identify the selected radio button.
+Radio buttons are commonly used in forms, quizzes, and option selections.
+
+Graphical View
+. (•) Male
+. ( ) Female
+. ( ) Other
+
+
+Syntax
+
+Check Selected Radio
+. radio.checked
+
+-->
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Radio Button Example</title>
+  <style>
+    .box {
+      margin: 10px;
+      font-size: 22px;
+    }
+  </style>
+</head>
+
+<body>
+  <h2>Select Gender</h2>
+  <label class="box"><input type="radio" name="gender" id="male">Male</label>
+  <br>
+  <label class="box"><input type="radio" name="gender" id="female">Female</label>
+
+    <br><br>
+  <button onclick="showGender()" class="box">Submit</button>
+  <h2 id="result">Output</h2>
+  <script>
+    function showGender() {
+      // Selecting radio buttons
+      let male = document.getElementById("male");
+      let female = document.getElementById("female");
+      // Checking selected option
+      if(male.checked) {
+        document.getElementById("result").innerText = "Selected : Male";
+      }
+      else if(female.checked) {
+        document.getElementById("result").innerText = "Selected : Female";
+      }
+      else {
+        document.getElementById("result").innerText = "No Option Selected";
+      }
+    }
+  </script>
+</body>
+</html>

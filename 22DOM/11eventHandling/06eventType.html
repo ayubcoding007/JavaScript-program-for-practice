@@ -1,0 +1,60 @@
+<!-- 
+event.type is a property of the Event Object that returns the type of event that occurred.
+It tells JavaScript which event triggered the event handler.
+This property is useful when handling multiple events with one function.
+Examples of event types are click, mouseover, keydown, and submit.
+
+Graphical Flow
+
+User Action
+     |
+     v
+ Event Occurs
+(click, keydown, mouseover)
+     |
+     v
+event.type
+     |
+     v
+Returns Event Name
+
+Syntax
+event.type
+
+-->
+
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Event Type Example</title>
+  <style>
+    .box {
+      width: 300px;
+      padding: 20px;
+      border: 2px solid blue;
+      text-align: center;
+      font-size: 25px;
+      margin: 20px;
+    }
+  </style>
+</head>
+<body>
+  <button id="btn" class="box">
+    Click Here
+  </button>
+  <h2 id="result">
+    Event Output
+  </h2>
+  <script>
+    let button = document.getElementById("btn");
+    let result = document.getElementById("result");
+
+    // Using event.type
+    button.addEventListener("click", function(event) {
+        result.innerText = "Event Type : " + event.type;
+      }
+    );
+  </script>
+</body>
+</html>

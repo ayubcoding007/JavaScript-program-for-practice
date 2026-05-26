@@ -1,0 +1,51 @@
+<!-- A checkbox is an HTML form element that allows users to select or deselect options.
+JavaScript can access and control checkboxes using the DOM.
+The checked property is used to check whether the checkbox is selected or not.
+Checkboxes are commonly used in forms, settings, and multiple option selections.
+
+Graphical View
+☐ JavaScript
+☑ HTML
+☐ CSS
+
+Syntax
+
+Check Checkbox Status
+. checkbox.checked
+
+Set Checkbox Checked
+. checkbox.checked = true;
+ -->
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Checkbox Example</title>
+  <style>
+    .box {
+      margin: 10px;
+      font-size: 22px;
+    }
+  </style>
+</head>
+
+<body>
+  <label class="box"><input type="checkbox" id="checkBox">Accept Terms & Conditions</label>
+  <br>
+  <button onclick="checkStatus()" class="box">Check Status</button>
+  <h2 id="result">Output</h2>
+  <script>
+    function checkStatus() {
+      // Selecting checkbox
+      let checkbox = document.getElementById("checkBox");
+      // Checking status
+      if(checkbox.checked) {
+        document.getElementById("result").innerText = "Checkbox is Checked";
+      }
+      else {
+        document.getElementById("result").innerText = "Checkbox is Unchecked";
+      }
+    }
+  </script>
+</body>
+</html>

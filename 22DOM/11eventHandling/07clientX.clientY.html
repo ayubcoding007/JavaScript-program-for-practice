@@ -1,0 +1,66 @@
+<!-- 
+clientX and clientY are properties of the Mouse Event Object.
+They return the horizontal (X) and vertical (Y) coordinates of the mouse pointer inside the browser window.
+These properties help detect mouse position during events like click, mousemove, and mouseover.
+They are commonly used in games, drawing apps, and interactive webpages.
+
+Graphical View
+
+Browser Window
+--------------------------------
+(0,0)
+  |
+  |------ X Axis → clientX
+  |
+  |
+  ↓
+ Y Axis → clientY
+
+Syntax
+event.clientX
+event.clientY
+ -->
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>clientX clientY Example</title>
+
+  <style>
+
+    .box {
+      width: 400px;
+      height: 200px;
+      border: 3px solid blue;
+      margin: 20px;
+      font-size: 25px;
+      text-align: center;
+      line-height: 200px;
+    }
+
+  </style>
+
+</head>
+
+<body>
+
+  <div id="box" class="box">
+    Click Anywhere Inside Box
+  </div>
+
+  <h2 id="result">
+    Mouse Position
+  </h2>
+
+  <script>
+    let box =
+      document.getElementById("box");
+    let result = document.getElementById("result");
+    // Mouse click event
+    box.addEventListener("click", function(event) {
+        result.innerText = "clientX : " + event.clientX + " | clientY : " + event.clientY;
+      }
+    );
+  </script>
+</body>
+</html>
