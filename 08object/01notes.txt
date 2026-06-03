@@ -1,0 +1,137 @@
+In JavaScript, an object is a collection of key-value pairs used to store related data and functions.
+. Properties → data values
+. Methods → functions inside objects
+
+Example:
+const person = {
+    name: "ayub",
+    age: 22,
+    city: "Hyderabad"
+};
+
+console.log(person.name); // Ravi
+console.log(person.age);  // 25
+
+
+Types of Defining Objects in JavaScript
+
+1. Object Literal (Most Common)
+Simple and easy way.
+
+const car = {
+    brand: "Toyota",
+    model: "Camry",
+    year: 2024
+};
+console.log(car.brand);
+
+Advantages
+. Easy syntax
+. Fast creation
+. Most commonly used
+
+
+2. Using new Object()
+
+const student = new Object();
+student.name = "Anil";
+student.age = 20;
+
+
+3. Constructor Function
+
+Used to create multiple objects.
+function Employee(name, salary) {
+    this.name = name;
+    this.salary = salary;
+}
+const emp1 = new Employee("Ramesh", 50000);
+const emp2 = new Employee("Suresh", 60000);
+console.log(emp1.name);
+
+Why use?
+. Reusable object template
+. Good for many similar objects
+
+
+4. Using ES6 Class
+
+Modern JavaScript method.
+class Animal {
+    constructor(name, type) {
+        this.name = name;
+        this.type = type;
+    }
+}
+const dog = new Animal("Tommy", "Dog");
+console.log(dog.name);
+
+Benefits
+. Cleaner syntax
+. Supports OOP concepts
+
+
+5. Using Object.create()
+
+Creates object from another object.
+const person = {
+    greet() {
+        console.log("Hello");
+    }
+};
+const user = Object.create(person);
+user.name = "Kiran";
+user.greet();
+
+
+Accessing Object Properties
+
+Dot Notation
+console.log(person.name);
+
+Bracket Notation
+console.log(person["name"]);
+
+Useful when
+. Property name is dynamic
+. Property contains spaces
+
+
+Adding Properties
+
+const mobile = {};
+mobile.brand = "Samsung";
+mobile.price = 30000;
+console.log(mobile);
+
+
+Updating Properties
+mobile.price = 35000;
+
+
+Deleting Properties
+delete mobile.price;
+
+
+Object Methods
+
+Functions inside objects are called methods.
+const calculator = {
+    add: function(a, b) {
+        return a + b;
+    }
+};
+console.log(calculator.add(2, 3));
+
+
+Nested Objects
+
+Objects inside objects.
+const user = {
+    name: "Raj",
+    address: {
+        city: "Vijayawada",
+        pin: 520001
+    }
+};
+console.log(user.address.city);

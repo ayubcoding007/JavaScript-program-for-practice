@@ -1,0 +1,48 @@
+A String is a primitive data type used to represent text in JavaScript. It consists of a sequence of characters enclosed 
+in single quotes (' '), double quotes (" "), or backticks (` `). Strings are immutable, meaning their individual characters 
+cannot be changed after creation.
+
+Creating Strings
+
+Using Single Quotes
+. let name = 'Sheikh';
+
+Using Double Quotes
+. let city = "Hyderabad";
+
+Using Backticks (Template Literals)
+. let message = `Hello World`;
+
+
+String Examples
+
+let firstName = "Ayub";
+console.log(firstName);
+console.log(typeof firstName);
+
+
+String Length
+. The length property returns the number of characters.
+
+let str = "JavaScript";
+console.log(str.length);
+
+
+Accessing Characters
+. Using Index
+let str = "Hello";
+console.log(str[0]); // H
+console.log(str[1]); // e
+
+Using charAt()
+let str = "Hello";
+console.log(str.charAt(0)); // H
+
+
+String Immutability
+let str = "Hello";
+str[0] = "J";
+console.log(str); // Hello
+. The string doesn't change because strings are immutable.
+
+
