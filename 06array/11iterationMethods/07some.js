@@ -69,6 +69,14 @@ const validIndexFound = cityNames.some((cityValue, cityIndex) => {
 });
 console.log(validIndexFound); // true
 
+/*
+Difference  every() vs some()
+Feature	                        every()	            some()
+All elements must pass	        Yes	                No
+At least one element passes	    No	                Yes
+Returns true when	            All pass	        Any one passes
+Return type	                    Boolean	            Boolean
+*/
 
 /*
 Key Points
